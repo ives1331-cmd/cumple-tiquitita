@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 :root{
     --rosa:#d98fa6;
     --rosa-oscuro:#b56580;
@@ -19,7 +20,6 @@
     --vino:#592d3f;
     --texto:#422c34;
     --blanco:#ffffff;
-    --crema:#fffaf2;
 }
 
 *{
@@ -41,7 +41,6 @@ body{
     font-family:"DM Sans",sans-serif;
     line-height:1.7;
     overflow-x:hidden;
-    cursor:default;
 }
 
 /* =========================================================
@@ -61,31 +60,36 @@ body{
 
 .f-heart{
     position:absolute;
-    color:rgba(217,143,166,0.25);
+    color:rgba(217,143,166,.25);
     font-size:1.5rem;
     animation:floatUp 10s linear infinite;
     bottom:-50px;
 }
 
 @keyframes floatUp{
+
     0%{
-        transform:translateY(0) rotate(0deg) scale(0.8);
+        transform:translateY(0) rotate(0deg) scale(.8);
         opacity:0;
     }
+
     20%{
-        opacity:0.8;
+        opacity:.8;
     }
+
     80%{
-        opacity:0.8;
+        opacity:.8;
     }
+
     100%{
         transform:translateY(-110vh) rotate(360deg) scale(1.2);
         opacity:0;
     }
+
 }
 
 /* =========================================================
-   CORAZONES AL HACER CLIC
+   CORAZONES AL HACER CLICK
 ========================================================= */
 
 .click-heart{
@@ -94,22 +98,27 @@ body{
     font-size:1.4rem;
     pointer-events:none;
     z-index:9999;
-    animation:burstUp 0.9s ease-out forwards;
+    animation:burstUp .9s ease-out forwards;
 }
 
 @keyframes burstUp{
+
     0%{
-        transform:translate(0, 0) scale(0.5);
+        transform:translate(0,0) scale(.5);
         opacity:1;
     }
+
     100%{
-        transform:translate(calc(var(--rand-x) * 40px), -70px) scale(1.3);
+        transform:
+            translate(calc(var(--rand-x) * 40px),-70px)
+            scale(1.3);
         opacity:0;
     }
+
 }
 
 /* =========================================================
-   GLOBOS MINIMALISTAS
+   GLOBOS
 ========================================================= */
 
 .balloons{
@@ -156,7 +165,6 @@ body{
     top:20%;
     background:#e8a6ba;
     color:#e8a6ba;
-    animation-delay:0s;
 }
 
 .balloon-2{
@@ -184,16 +192,19 @@ body{
 }
 
 @keyframes balloonFloat{
+
     0%,100%{
         transform:translateY(0) rotate(-3deg);
     }
+
     50%{
         transform:translateY(-18px) rotate(4deg);
     }
+
 }
 
 /* =========================================================
-   CONFETI FINAL
+   CONFETI
 ========================================================= */
 
 .confetti-container{
@@ -214,14 +225,20 @@ body{
 }
 
 @keyframes confettiFall{
+
     0%{
         transform:translateY(0) rotate(0deg);
         opacity:1;
     }
+
     100%{
-        transform:translateY(110vh) translateX(var(--drift)) rotate(720deg);
+        transform:
+            translateY(110vh)
+            translateX(var(--drift))
+            rotate(720deg);
         opacity:0;
     }
+
 }
 
 /* =========================================================
@@ -266,14 +283,14 @@ h1,h2{
 }
 
 h1{
-    font-size:clamp(3.2rem, 9vw, 6.2rem);
+    font-size:clamp(3.2rem,9vw,6.2rem);
     line-height:1.05;
     margin:0 0 15px;
-    text-shadow:0 5px 20px rgba(99,55,71,0.1);
+    text-shadow:0 5px 20px rgba(99,55,71,.1);
 }
 
 h2{
-    font-size:clamp(2.1rem, 5.5vw, 3.2rem);
+    font-size:clamp(2.1rem,5.5vw,3.2rem);
     margin:0 0 25px;
 }
 
@@ -285,7 +302,7 @@ h2{
 }
 
 /* =========================================================
-   PASTEL PORTADA
+   PASTEL
 ========================================================= */
 
 .birthday-cake{
@@ -338,17 +355,9 @@ h2{
     background:#d98fa6;
 }
 
-.candle-1{
-    left:38px;
-}
-
-.candle-2{
-    left:56px;
-}
-
-.candle-3{
-    left:74px;
-}
+.candle-1{left:38px;}
+.candle-2{left:56px;}
+.candle-3{left:74px;}
 
 .flame{
     position:absolute;
@@ -362,25 +371,20 @@ h2{
     box-shadow:0 0 12px rgba(231,162,77,.45);
 }
 
-.flame-1{
-    left:37px;
-}
-
-.flame-2{
-    left:55px;
-}
-
-.flame-3{
-    left:73px;
-}
+.flame-1{left:37px;}
+.flame-2{left:55px;}
+.flame-3{left:73px;}
 
 @keyframes flame{
+
     0%,100%{
         transform:rotate(-45deg) scale(1);
     }
+
     50%{
         transform:rotate(-42deg) scale(1.12);
     }
+
 }
 
 .cake-text{
@@ -405,15 +409,19 @@ h2{
 }
 
 @keyframes bounce{
+
     0%,20%,50%,80%,100%{
         transform:translateY(0);
     }
+
     40%{
         transform:translateY(-8px);
     }
+
     60%{
         transform:translateY(-4px);
     }
+
 }
 
 /* =========================================================
@@ -421,18 +429,18 @@ h2{
 ========================================================= */
 
 .card{
-    background:rgba(255,255,255,0.88);
-    border:1px solid rgba(217,143,166,0.35);
+    background:rgba(255,255,255,.88);
+    border:1px solid rgba(217,143,166,.35);
     border-radius:32px;
     padding:45px 35px;
-    box-shadow:0 20px 60px rgba(100,50,70,0.08);
+    box-shadow:0 20px 60px rgba(100,50,70,.08);
     backdrop-filter:blur(10px);
-    transition:transform .3s ease, box-shadow .3s ease;
+    transition:transform .3s ease,box-shadow .3s ease;
 }
 
 .card:hover{
     transform:translateY(-4px);
-    box-shadow:0 25px 70px rgba(100,50,70,0.12);
+    box-shadow:0 25px 70px rgba(100,50,70,.12);
 }
 
 /* =========================================================
@@ -473,14 +481,17 @@ h2{
 }
 
 @keyframes fadeIn{
+
     from{
         opacity:0;
         transform:translateY(-6px);
     }
+
     to{
         opacity:1;
         transform:translateY(0);
     }
+
 }
 
 /* =========================================================
@@ -501,7 +512,7 @@ h2{
     display:block;
     margin:auto;
     box-shadow:0 18px 40px rgba(80,40,55,.18);
-    transition:transform .4s ease, filter .4s ease;
+    transition:transform .4s ease,filter .4s ease;
 }
 
 .photo:hover{
@@ -594,11 +605,11 @@ h2{
     box-shadow:0 10px 30px rgba(0,0,0,.2);
 }
 
-.player iframe{
+.player video{
     width:100%;
-    aspect-ratio:16/9;
-    border:0;
     display:block;
+    max-height:480px;
+    background:#111;
 }
 
 .note{
@@ -620,7 +631,7 @@ h2{
 }
 
 /* =========================================================
-   FINAL DE CUMPLEAÑOS
+   FINAL
 ========================================================= */
 
 .final{
@@ -699,15 +710,19 @@ h2{
 }
 
 @keyframes heartbeat{
+
     0%,100%{
         transform:scale(1);
     }
+
     15%,45%{
         transform:scale(1.2);
     }
+
     30%{
         transform:scale(1);
     }
+
 }
 
 /* =========================================================
@@ -739,21 +754,25 @@ h2{
     .birthday-cake{
         transform:scale(.9);
     }
+
 }
+
 </style>
 </head>
 
 <body>
 
-<!-- CORAZONES FLOTANTES -->
+<!-- CORAZONES -->
 <div class="floating-hearts" id="hearts-container"></div>
 
-<!-- GLOBOS MINIMALISTAS -->
+<!-- GLOBOS -->
 <div class="balloons">
+
     <div class="balloon balloon-1"></div>
     <div class="balloon balloon-2"></div>
     <div class="balloon balloon-3"></div>
     <div class="balloon balloon-4"></div>
+
 </div>
 
 <!-- CONFETI -->
@@ -767,9 +786,10 @@ h2{
 
 <section class="hero">
 
-    <div class="hero-small">para vos, mi tiquitita</div>
+    <div class="hero-small">
+        para vos, mi tiquitita
+    </div>
 
-    <!-- PASTEL -->
     <div class="birthday-cake">
 
         <div class="flame flame-1"></div>
@@ -786,28 +806,47 @@ h2{
 
     </div>
 
-    <div class="cake-text">hoy es tu día ♡</div>
+    <div class="cake-text">
+        hoy es tu día ♡
+    </div>
 
-    <h1>Mi tiquitita</h1>
+    <h1>
+        Mi tiquitita
+    </h1>
 
     <p class="subtitle">
         Hoy es tu cumpleaños, y armé este detallito exclusivo para vos,
         con todo mi cariño.
     </p>
 
-    <!-- BOTÓN INTERACTIVO -->
-    <button class="interactive-surprise-btn" onclick="toggleSecret()">
+    <button
+        class="interactive-surprise-btn"
+        onclick="toggleSecret()">
+
         💌 Toca aquí para una sorpresita
+
     </button>
 
-    <div id="secret-box" class="secret-note">
+    <div
+        id="secret-box"
+        class="secret-note">
+
         Cada instante a tu lado es mi regalo favorito.
         Gracias por existir y por ser mi tiquitita hermosa. ♡
+
     </div>
 
-    <div class="heart-icon" style="margin-top:35px;">♡</div>
+    <div
+        class="heart-icon"
+        style="margin-top:35px;">
 
-    <p class="scroll">desliza hacia abajo</p>
+        ♡
+
+    </div>
+
+    <p class="scroll">
+        desliza hacia abajo
+    </p>
 
 </section>
 
@@ -820,23 +859,26 @@ h2{
 
     <div class="card">
 
-        <h2>Antes de nosotros</h2>
+        <h2>
+            Antes de nosotros
+        </h2>
 
         <p>
             Antes de que existiera yo en tu vida, ya eras vos.
         </p>
 
         <p>
-            Ya estaba esa niñita hermosa que después iba a crecer, aprender,
-            sonreír, hacer sus cosas y convertirse en la mujer maravillosa
-            que hoy conozco y amo tanto.
+            Ya estaba esa niñita hermosa que después iba a crecer,
+            aprender, sonreír, hacer sus cosas y convertirse
+            en la mujer maravillosa que hoy conozco y amo tanto.
         </p>
 
         <div class="photo-wrap">
 
-            <img src="foto1.jpg"
-                 class="photo"
-                 alt="Mi tiquitita de bebé">
+            <img
+                src="foto1.jpg"
+                class="photo"
+                alt="Mi tiquitita de bebé">
 
             <div class="photo-caption">
                 mi tiquitita bebé ♡
@@ -845,8 +887,9 @@ h2{
         </div>
 
         <p>
-            Me da una ternura infinita ver estas fotos tuyas y pensar en el camino
-            que la vida te hizo recorrer hasta llegar a ser quien sos hoy.
+            Me da una ternura infinita ver estas fotos tuyas y pensar
+            en el camino que la vida te hizo recorrer hasta llegar
+            a ser quien sos hoy.
         </p>
 
     </div>
@@ -864,9 +907,10 @@ h2{
 
         <div class="photo-wrap">
 
-            <img src="foto2.jpg"
-                 class="photo"
-                 alt="Mi tiquitita de niña">
+            <img
+                src="foto2.jpg"
+                class="photo"
+                alt="Mi tiquitita de niña">
 
             <div class="photo-caption">
                 creciendo y brillando
@@ -875,8 +919,8 @@ h2{
         </div>
 
         <p>
-            Amo conocer cada parte tuya, incluso las que existían mucho antes
-            de que nos cruzáramos.
+            Amo conocer cada parte tuya, incluso las que existían
+            mucho antes de que nos cruzáramos.
         </p>
 
         <p>
@@ -886,8 +930,15 @@ h2{
 
         <div class="divider"></div>
 
-        <p style="text-align:center;font-style:italic;color:var(--rosa-oscuro);">
+        <p
+            style="
+                text-align:center;
+                font-style:italic;
+                color:var(--rosa-oscuro);
+            ">
+
             Y después, en algún momento, aparecimos nosotros.
+
         </p>
 
     </div>
@@ -903,7 +954,9 @@ h2{
 
     <div class="card">
 
-        <h2>Nuestra canción</h2>
+        <h2>
+            Nuestra canción
+        </h2>
 
         <p>
             Y ahí empezaron nuestras cosas. Juntitos, de amor,
@@ -933,12 +986,33 @@ h2{
                 tenerte en mi vida.
             </div>
 
-            <button class="music-button"
-                    onclick="playSong('airbag')">
+            <button
+                class="music-button"
+                onclick="playSong('airbag')">
+
                 ♫ escuchar nuestro pedacito
+
             </button>
 
-            <div id="player-airbag" class="player"></div>
+            <div
+                id="player-airbag"
+                class="player">
+
+                <video
+                    id="video-airbag"
+                    preload="metadata"
+                    playsinline
+                    controls>
+
+                    <source
+                        src="videos/airbag.mp4"
+                        type="video/mp4">
+
+                    Tu navegador no puede reproducir este video.
+
+                </video>
+
+            </div>
 
             <div class="note">
                 Nuestra canción especial.
@@ -952,14 +1026,16 @@ h2{
 
 
 <!-- =====================================================
-     VIEJAS LOCAS
+     ME GUSTAS MUCHO
 ===================================================== -->
 
 <section>
 
     <div class="card">
 
-        <h2>Lo mucho que me gustás</h2>
+        <h2>
+            Lo mucho que me gustás
+        </h2>
 
         <p>
             Porque cada día que pasa me doy cuenta de lo muchísimo
@@ -988,12 +1064,33 @@ h2{
                 de la persona que tenés al lado.
             </div>
 
-            <button class="music-button"
-                    onclick="playSong('viejaslocas')">
+            <button
+                class="music-button"
+                onclick="playSong('meGustas')">
+
                 ♫ escuchar nuestro pedacito
+
             </button>
 
-            <div id="player-viejaslocas" class="player"></div>
+            <div
+                id="player-meGustas"
+                class="player">
+
+                <video
+                    id="video-meGustas"
+                    preload="metadata"
+                    playsinline
+                    controls>
+
+                    <source
+                        src="videos/me-gustas-mucho.mp4"
+                        type="video/mp4">
+
+                    Tu navegador no puede reproducir este video.
+
+                </video>
+
+            </div>
 
             <div class="note">
                 Un pedacito elegido para este momento.
@@ -1007,49 +1104,71 @@ h2{
 
 
 <!-- =====================================================
-     SPINETTA
+     LAGO EN EL CIELO
 ===================================================== -->
 
 <section>
 
     <div class="card">
 
-        <h2>Lo que siento por vos</h2>
+        <h2>
+            Un pedacito de nosotros
+        </h2>
 
         <p>
-            Y entre todas las cosas que podría decirte en tu cumpleaños,
-            hay una que para mí es muy sencilla:
-            te quiero muchísimo.
+            Hay canciones que tienen algo especial y que simplemente
+            terminan acompañando momentos de la vida.
         </p>
 
         <p>
-            Quiero seguir compartiendo cosas con vos,
-            seguir teniendo nuestros momentos, nuestras risas
-            y esos ratitos en los que simplemente me gusta estar ahí.
+            Esta me gusta para nosotros porque tiene esa sensación
+            de mirar a alguien y encontrar algo bonito en todo
+            lo que comparten.
         </p>
 
         <div class="music-card">
 
             <div class="music-title">
-                Seguir viviendo sin tu amor
+                Lago en el Cielo
             </div>
 
             <div class="music-artist">
-                Luis Alberto Spinetta
+                Gustavo Cerati
             </div>
 
             <div class="music-reason">
-                ♡ La elegí porque expresa ese lugar tan importante
-                que puede llegar a ocupar alguien cuando ya forma
-                parte de tu vida de verdad.
+                ♡ Porque tiene esa sensación tranquila y bonita
+                que quería dejar acá, como uno de esos momentos
+                que simplemente disfruto compartir con vos.
             </div>
 
-            <button class="music-button"
-                    onclick="playSong('spinetta')">
+            <button
+                class="music-button"
+                onclick="playSong('lago')">
+
                 ♫ escuchar nuestro pedacito
+
             </button>
 
-            <div id="player-spinetta" class="player"></div>
+            <div
+                id="player-lago"
+                class="player">
+
+                <video
+                    id="video-lago"
+                    preload="metadata"
+                    playsinline
+                    controls>
+
+                    <source
+                        src="videos/lago-en-el-cielo.mp4"
+                        type="video/mp4">
+
+                    Tu navegador no puede reproducir este video.
+
+                </video>
+
+            </div>
 
             <div class="note">
                 Un pedacito para vos.
@@ -1063,55 +1182,74 @@ h2{
 
 
 <!-- =====================================================
-     ABEL PINTOS
+     WILLY COLÓN
 ===================================================== -->
 
 <section>
 
-    <div class="card apology">
+    <div class="card">
 
-        <h2>Por cada momento juntos</h2>
+        <h2>
+            Porque me tenés así
+        </h2>
 
         <p>
-            Porque cada instante a tu lado tiene un sentido especial
-            y valoro muchísimo todo lo lindo que construimos.
+            Y también quería poner una canción que tuviera ese toque
+            diferente, porque vos sabés que no todo tiene que ser
+            igual para que sea bonito.
         </p>
 
         <p>
-            Sé que a veces he sido malo con vos, egoísta o frío,
-            y perdón por esas veces.
-        </p>
-
-        <p>
-            Pero también quiero que sepas que te quiero muchísimo
-            y que me importa seguir cuidando todo esto que tenemos.
+            Esta me acordó a esa sensación de estar completamente
+            atrapado por alguien que te gusta muchísimo.
         </p>
 
         <div class="music-card">
 
             <div class="music-title">
-                Motivos
+                Será que me has hipnotizado
             </div>
 
             <div class="music-artist">
-                Abel Pintos
+                Willie Colón
             </div>
 
             <div class="music-reason">
-                ♡ Porque hay personas que terminan convirtiéndose
-                en una parte muy importante de nuestras razones
-                para sonreír, querer y seguir compartiendo.
+                ♡ Porque hay algo en vos que me tiene completamente
+                encantado y esta canción tenía que formar parte
+                de este detallito.
             </div>
 
-            <button class="music-button"
-                    onclick="playSong('abel')">
+            <button
+                class="music-button"
+                onclick="playSong('hipnotizado')">
+
                 ♫ escuchar nuestro pedacito
+
             </button>
 
-            <div id="player-abel" class="player"></div>
+            <div
+                id="player-hipnotizado"
+                class="player">
+
+                <video
+                    id="video-hipnotizado"
+                    preload="metadata"
+                    playsinline
+                    controls>
+
+                    <source
+                        src="videos/hipnotizado.mp4"
+                        type="video/mp4">
+
+                    Tu navegador no puede reproducir este video.
+
+                </video>
+
+            </div>
 
             <div class="note">
-                Una canción para acompañar este pedacito de la historia.
+                Para mi tiquitita.
             </div>
 
         </div>
@@ -1122,14 +1260,16 @@ h2{
 
 
 <!-- =====================================================
-     CERATI
+     SILVIO RODRÍGUEZ
 ===================================================== -->
 
 <section>
 
     <div class="card future">
 
-        <h2>Y todavía nos queda muchísimo</h2>
+        <h2>
+            Y todavía nos queda muchísimo
+        </h2>
 
         <p>
             Quiero verte cumplir muchos cumpleaños más,
@@ -1145,29 +1285,48 @@ h2{
         <div class="music-card">
 
             <div class="music-title">
-                Crimen
+                Te Doy una Canción
             </div>
 
             <div class="music-artist">
-                Gustavo Cerati
+                Silvio Rodríguez
             </div>
 
             <div class="music-reason">
-                ♡ La puse acá porque después de todo lo que vivimos,
-                quería dejar una canción que acompañara esta parte
-                de seguir adelante juntos y mirar todo lo que todavía
-                nos queda por vivir.
+                ♡ Porque al final quería dejarte algo sencillo:
+                este pequeño detalle hecho especialmente para vos.
             </div>
 
-            <button class="music-button"
-                    onclick="playSong('cerati')">
+            <button
+                class="music-button"
+                onclick="playSong('teDoyUnaCancion')">
+
                 ♫ escuchar nuestro pedacito
+
             </button>
 
-            <div id="player-cerati" class="player"></div>
+            <div
+                id="player-teDoyUnaCancion"
+                class="player">
+
+                <video
+                    id="video-teDoyUnaCancion"
+                    preload="metadata"
+                    playsinline
+                    controls>
+
+                    <source
+                        src="videos/te-doy-una-cancion.mp4"
+                        type="video/mp4">
+
+                    Tu navegador no puede reproducir este video.
+
+                </video>
+
+            </div>
 
             <div class="note">
-                Un pedacito para cerrar esta parte.
+                Para vos, mi tiquitita.
             </div>
 
         </div>
@@ -1178,16 +1337,17 @@ h2{
 
 
 <!-- =====================================================
-     FINAL DE CUMPLEAÑOS
+     FINAL
 ===================================================== -->
 
 <section class="final">
 
     <div class="photo-wrap">
 
-        <img src="foto3.jpg"
-             class="photo"
-             alt="Nosotros">
+        <img
+            src="foto3.jpg"
+            class="photo"
+            alt="Nosotros">
 
     </div>
 
@@ -1206,10 +1366,11 @@ h2{
         y estando juntitos.
     </p>
 
-
     <!-- PASTEL FINAL -->
 
-    <div class="birthday-cake final-cake" id="final-cake">
+    <div
+        class="birthday-cake final-cake"
+        id="final-cake">
 
         <div class="flame flame-1"></div>
         <div class="flame flame-2"></div>
@@ -1225,13 +1386,20 @@ h2{
 
     </div>
 
-    <button class="birthday-button"
-            onclick="makeWish()">
+    <button
+        class="birthday-button"
+        onclick="makeWish()">
+
         ✨ pedí tu deseo
+
     </button>
 
-    <div id="wish-message" class="wish-message">
+    <div
+        id="wish-message"
+        class="wish-message">
+
         Deseo concedido ♡
+
     </div>
 
     <div class="heart-icon">
@@ -1239,20 +1407,16 @@ h2{
     </div>
 
     <div class="final-love">
+
         Te amo mucho muchísimo,<br>
         tiquitita bebé ♡
+
     </div>
 
 </section>
 
 </main>
 
-
-<!-- =====================================================
-     YOUTUBE IFRAME API
-===================================================== -->
-
-<script src="https://www.youtube.com/iframe_api"></script>
 
 <script>
 
@@ -1263,26 +1427,26 @@ h2{
 function createFloatingHearts(){
 
     const container =
-        document.getElementById('hearts-container');
+        document.getElementById("hearts-container");
 
     const symbols =
-        ['♡','♥','✿','✨'];
+        ["♡","♥","✿","✨"];
 
-    setInterval(() => {
+    setInterval(function(){
 
         const heart =
-            document.createElement('div');
+            document.createElement("div");
 
-        heart.classList.add('f-heart');
+        heart.classList.add("f-heart");
 
         heart.style.left =
-            Math.random() * 100 + 'vw';
+            Math.random() * 100 + "vw";
 
         heart.style.animationDuration =
-            (8 + Math.random() * 5) + 's';
+            (8 + Math.random() * 5) + "s";
 
         heart.style.fontSize =
-            (1 + Math.random() * 1.2) + 'rem';
+            (1 + Math.random() * 1.2) + "rem";
 
         heart.innerText =
             symbols[
@@ -1293,8 +1457,10 @@ function createFloatingHearts(){
 
         container.appendChild(heart);
 
-        setTimeout(() => {
+        setTimeout(function(){
+
             heart.remove();
+
         },11000);
 
     },800);
@@ -1305,43 +1471,45 @@ createFloatingHearts();
 
 
 /* =========================================================
-   CORAZONES AL HACER CLIC
+   CORAZONES AL HACER CLICK
 ========================================================= */
 
-document.addEventListener('click',function(e){
+document.addEventListener("click",function(e){
 
     if(
-        e.target.tagName === 'IFRAME' ||
-        e.target.closest('button')
+        e.target.closest("button") ||
+        e.target.closest("video")
     ){
         return;
     }
 
     const heart =
-        document.createElement('div');
+        document.createElement("div");
 
-    heart.classList.add('click-heart');
+    heart.classList.add("click-heart");
 
-    heart.innerHTML = '♡';
+    heart.innerHTML = "♡";
 
     heart.style.left =
-        e.pageX + 'px';
+        e.pageX + "px";
 
     heart.style.top =
-        e.pageY + 'px';
+        e.pageY + "px";
 
     const randX =
-        (Math.random() - 0.5) * 2;
+        (Math.random() - .5) * 2;
 
     heart.style.setProperty(
-        '--rand-x',
+        "--rand-x",
         randX
     );
 
     document.body.appendChild(heart);
 
-    setTimeout(() => {
+    setTimeout(function(){
+
         heart.remove();
+
     },900);
 
 });
@@ -1354,15 +1522,15 @@ document.addEventListener('click',function(e){
 function toggleSecret(){
 
     const box =
-        document.getElementById('secret-box');
+        document.getElementById("secret-box");
 
-    if(box.style.display === 'block'){
+    if(box.style.display === "block"){
 
-        box.style.display = 'none';
+        box.style.display = "none";
 
     }else{
 
-        box.style.display = 'block';
+        box.style.display = "block";
 
     }
 
@@ -1377,22 +1545,18 @@ function launchConfetti(){
 
     const container =
         document.getElementById(
-            'confetti-container'
+            "confetti-container"
         );
 
-    const pieces = [
-        '♡',
-        '✦',
-        '✿',
-        '•'
-    ];
+    const pieces =
+        ["♡","✦","✿","•"];
 
     for(let i = 0; i < 45; i++){
 
         const piece =
-            document.createElement('div');
+            document.createElement("div");
 
-        piece.classList.add('confetti');
+        piece.classList.add("confetti");
 
         piece.innerText =
             pieces[
@@ -1402,23 +1566,25 @@ function launchConfetti(){
             ];
 
         piece.style.left =
-            Math.random() * 100 + 'vw';
+            Math.random() * 100 + "vw";
 
         piece.style.animationDelay =
-            Math.random() * 0.8 + 's';
+            Math.random() * .8 + "s";
 
         piece.style.fontSize =
-            (10 + Math.random() * 12) + 'px';
+            (10 + Math.random() * 12) + "px";
 
         piece.style.setProperty(
-            '--drift',
-            ((Math.random() - 0.5) * 180) + 'px'
+            "--drift",
+            ((Math.random() - .5) * 180) + "px"
         );
 
         container.appendChild(piece);
 
-        setTimeout(() => {
+        setTimeout(function(){
+
             piece.remove();
+
         },4500);
 
     }
@@ -1433,18 +1599,15 @@ function launchConfetti(){
 function makeWish(){
 
     const cake =
-        document.getElementById(
-            'final-cake'
-        );
+        document.getElementById("final-cake");
 
     const message =
-        document.getElementById(
-            'wish-message'
-        );
+        document.getElementById("wish-message");
 
-    cake.classList.add('blown');
+    cake.classList.add("blown");
 
-    message.style.display = 'block';
+    message.style.display =
+        "block";
 
     launchConfetti();
 
@@ -1452,50 +1615,34 @@ function makeWish(){
 
 
 /* =========================================================
-   REPRODUCTOR DE MÚSICA
-   LOS VIDEO ID Y TIEMPOS SE MANTIENEN IGUALES
+   REPRODUCTOR MP4 LOCAL
 ========================================================= */
 
 const songs = {
 
-    airbag: {
-        videoId:"ue0RP3C1Brg",
-        start:68,
-        end:88
+    airbag:{
+        element:"video-airbag"
     },
 
-    viejaslocas: {
-        videoId:"qpkBCLsk6uc",
-        start:25,
-        end:45
+    meGustas:{
+        element:"video-meGustas"
     },
 
-    spinetta: {
-        videoId:"MA8-Ld8zYkk",
-        start:35,
-        end:54
+    lago:{
+        element:"video-lago"
     },
 
-    abel: {
-        videoId:"BVe701eFS8E",
-        start:40,
-        end:60
+    hipnotizado:{
+        element:"video-hipnotizado"
     },
 
-    cerati: {
-        videoId:"xyv-R6z609E",
-        start:50,
-        end:70
+    teDoyUnaCancion:{
+        element:"video-teDoyUnaCancion"
     }
 
 };
 
-
-const players = {};
-
 let currentSong = null;
-
-let stopTimer = null;
 
 
 function playSong(songName){
@@ -1508,44 +1655,56 @@ function playSong(songName){
     }
 
 
-    if(stopTimer){
+    /* Detener la canción anterior */
 
-        clearTimeout(stopTimer);
+    if(currentSong){
 
-        stopTimer = null;
+        const oldVideo =
+            document.getElementById(
+                songs[currentSong].element
+            );
+
+        if(oldVideo){
+
+            oldVideo.pause();
+
+            oldVideo.currentTime = 0;
+
+        }
+
+        const oldBox =
+            oldVideo ?
+            oldVideo.closest(".player") :
+            null;
+
+        if(oldBox){
+
+            oldBox.style.display =
+                "none";
+
+        }
 
     }
 
 
-    if(
-        currentSong &&
-        currentSong !== songName
-    ){
+    const video =
+        document.getElementById(
+            song.element
+        );
 
-        const oldPlayer =
-            players[currentSong];
-
-        if(
-            oldPlayer &&
-            typeof oldPlayer.stopVideo ===
-            "function"
-        ){
-
-            oldPlayer.stopVideo();
-
-        }
+    if(!video){
+        return;
+    }
 
 
-        const oldBox =
-            document.getElementById(
-                "player-" + currentSong
-            );
+    const box =
+        video.closest(".player");
 
-        if(oldBox){
 
-            oldBox.style.display = "none";
+    if(box){
 
-        }
+        box.style.display =
+            "block";
 
     }
 
@@ -1554,105 +1713,50 @@ function playSong(songName){
         songName;
 
 
-    const box =
-        document.getElementById(
-            "player-" + songName
-        );
-
-    if(!box){
-        return;
-    }
+    video.currentTime = 0;
 
 
-    box.style.display =
-        "block";
+    const playPromise =
+        video.play();
 
 
-    if(!players[songName]){
+    if(playPromise !== undefined){
 
-        players[songName] =
-            new YT.Player(
-                box,
-                {
+        playPromise.catch(function(error){
 
-                    videoId:
-                        song.videoId,
-
-                    playerVars:{
-                        autoplay:1,
-                        controls:1,
-                        rel:0,
-                        modestbranding:1,
-                        playsinline:1,
-                        enablejsapi:1,
-                        origin:
-                            window.location.origin
-                    },
-
-                    events:{
-
-                        onReady:function(event){
-
-                            event.target.loadVideoById({
-
-                                videoId:
-                                    song.videoId,
-
-                                startSeconds:
-                                    song.start,
-
-                                endSeconds:
-                                    song.end
-
-                            });
-
-                        }
-
-                    }
-
-                }
+            console.log(
+                "La reproducción necesita interacción del usuario:",
+                error
             );
 
-    }else{
-
-        players[songName]
-            .loadVideoById({
-
-                videoId:
-                    song.videoId,
-
-                startSeconds:
-                    song.start,
-
-                endSeconds:
-                    song.end
-
-            });
+        });
 
     }
 
-
-    stopTimer =
-        setTimeout(
-            function(){
-
-                if(
-                    players[songName] &&
-                    typeof players[songName]
-                        .pauseVideo ===
-                    "function"
-                ){
-
-                    players[songName]
-                        .pauseVideo();
-
-                }
-
-            },
-            (song.end - song.start) * 1000
-        );
-
 }
+
+
+/* =========================================================
+   AL TERMINAR UN VIDEO
+========================================================= */
+
+document.querySelectorAll("video").forEach(function(video){
+
+    video.addEventListener("ended",function(){
+
+        const box =
+            video.closest(".player");
+
+        if(box){
+
+            box.style.display =
+                "none";
+
+        }
+
+    });
+
+});
 
 </script>
 
