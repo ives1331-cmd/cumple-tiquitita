@@ -43,10 +43,6 @@ body{
     overflow-x:hidden;
 }
 
-/* =========================================================
-   CORAZONES FLOTANTES
-========================================================= */
-
 .floating-hearts{
     position:fixed;
     top:0;
@@ -67,30 +63,17 @@ body{
 }
 
 @keyframes floatUp{
-
     0%{
         transform:translateY(0) rotate(0deg) scale(.8);
         opacity:0;
     }
-
-    20%{
-        opacity:.8;
-    }
-
-    80%{
-        opacity:.8;
-    }
-
+    20%{opacity:.8;}
+    80%{opacity:.8;}
     100%{
         transform:translateY(-110vh) rotate(360deg) scale(1.2);
         opacity:0;
     }
-
 }
-
-/* =========================================================
-   CORAZONES AL HACER CLICK
-========================================================= */
 
 .click-heart{
     position:absolute;
@@ -102,24 +85,17 @@ body{
 }
 
 @keyframes burstUp{
-
     0%{
         transform:translate(0,0) scale(.5);
         opacity:1;
     }
-
     100%{
         transform:
             translate(calc(var(--rand-x) * 40px),-70px)
             scale(1.3);
         opacity:0;
     }
-
 }
-
-/* =========================================================
-   GLOBOS
-========================================================= */
 
 .balloons{
     position:fixed;
@@ -192,20 +168,13 @@ body{
 }
 
 @keyframes balloonFloat{
-
     0%,100%{
         transform:translateY(0) rotate(-3deg);
     }
-
     50%{
         transform:translateY(-18px) rotate(4deg);
     }
-
 }
-
-/* =========================================================
-   CONFETI
-========================================================= */
 
 .confetti-container{
     position:fixed;
@@ -225,12 +194,10 @@ body{
 }
 
 @keyframes confettiFall{
-
     0%{
         transform:translateY(0) rotate(0deg);
         opacity:1;
     }
-
     100%{
         transform:
             translateY(110vh)
@@ -238,12 +205,7 @@ body{
             rotate(720deg);
         opacity:0;
     }
-
 }
-
-/* =========================================================
-   ESTRUCTURA
-========================================================= */
 
 main{
     position:relative;
@@ -300,10 +262,6 @@ h2{
     font-size:1.12rem;
     color:#5e434e;
 }
-
-/* =========================================================
-   PASTEL
-========================================================= */
 
 .birthday-cake{
     position:relative;
@@ -376,15 +334,12 @@ h2{
 .flame-3{left:73px;}
 
 @keyframes flame{
-
     0%,100%{
         transform:rotate(-45deg) scale(1);
     }
-
     50%{
         transform:rotate(-42deg) scale(1.12);
     }
-
 }
 
 .cake-text{
@@ -394,10 +349,6 @@ h2{
     color:var(--rosa-oscuro);
     margin-top:-5px;
 }
-
-/* =========================================================
-   SCROLL
-========================================================= */
 
 .scroll{
     margin-top:40px;
@@ -409,24 +360,16 @@ h2{
 }
 
 @keyframes bounce{
-
     0%,20%,50%,80%,100%{
         transform:translateY(0);
     }
-
     40%{
         transform:translateY(-8px);
     }
-
     60%{
         transform:translateY(-4px);
     }
-
 }
-
-/* =========================================================
-   TARJETAS
-========================================================= */
 
 .card{
     background:rgba(255,255,255,.88);
@@ -442,10 +385,6 @@ h2{
     transform:translateY(-4px);
     box-shadow:0 25px 70px rgba(100,50,70,.12);
 }
-
-/* =========================================================
-   BOTÓN SORPRESA
-========================================================= */
 
 .interactive-surprise-btn{
     margin-top:25px;
@@ -481,22 +420,15 @@ h2{
 }
 
 @keyframes fadeIn{
-
     from{
         opacity:0;
         transform:translateY(-6px);
     }
-
     to{
         opacity:1;
         transform:translateY(0);
     }
-
 }
-
-/* =========================================================
-   FOTOS
-========================================================= */
 
 .photo-wrap{
     width:100%;
@@ -535,9 +467,9 @@ h2{
     margin:40px auto;
 }
 
-/* =========================================================
+/* ==============================
    MÚSICA
-========================================================= */
+============================== */
 
 .music-card{
     margin-top:35px;
@@ -546,11 +478,6 @@ h2{
     background:var(--blanco);
     border:1px solid #f0d8e2;
     box-shadow:0 12px 30px rgba(90,40,60,.06);
-    transition:transform .2s ease;
-}
-
-.music-card:hover{
-    transform:translateY(-2px);
 }
 
 .music-title{
@@ -593,7 +520,6 @@ h2{
 
 .music-button:hover{
     transform:scale(1.05);
-    box-shadow:0 8px 25px rgba(99,55,71,.35);
 }
 
 .player{
@@ -618,21 +544,10 @@ h2{
     color:#98717d;
 }
 
-/* =========================================================
-   TEXTOS
-========================================================= */
-
-.apology{
-    text-align:center;
-}
-
+.apology,
 .future{
     text-align:center;
 }
-
-/* =========================================================
-   FINAL
-========================================================= */
 
 .final{
     min-height:100vh;
@@ -710,24 +625,16 @@ h2{
 }
 
 @keyframes heartbeat{
-
     0%,100%{
         transform:scale(1);
     }
-
     15%,45%{
         transform:scale(1.2);
     }
-
     30%{
         transform:scale(1);
     }
-
 }
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
 
 @media(max-width:600px){
 
@@ -762,27 +669,20 @@ h2{
 
 <body>
 
-<!-- CORAZONES -->
 <div class="floating-hearts" id="hearts-container"></div>
 
-<!-- GLOBOS -->
 <div class="balloons">
-
     <div class="balloon balloon-1"></div>
     <div class="balloon balloon-2"></div>
     <div class="balloon balloon-3"></div>
     <div class="balloon balloon-4"></div>
-
 </div>
 
-<!-- CONFETI -->
 <div class="confetti-container" id="confetti-container"></div>
 
 <main>
 
-<!-- =====================================================
-     PORTADA
-===================================================== -->
+<!-- PORTADA -->
 
 <section class="hero">
 
@@ -827,21 +727,15 @@ h2{
 
     </button>
 
-    <div
-        id="secret-box"
-        class="secret-note">
+    <div id="secret-box" class="secret-note">
 
         Cada instante a tu lado es mi regalo favorito.
         Gracias por existir y por ser mi tiquitita hermosa. ♡
 
     </div>
 
-    <div
-        class="heart-icon"
-        style="margin-top:35px;">
-
+    <div class="heart-icon" style="margin-top:35px;">
         ♡
-
     </div>
 
     <p class="scroll">
@@ -851,9 +745,7 @@ h2{
 </section>
 
 
-<!-- =====================================================
-     ELLA DE NIÑA
-===================================================== -->
+<!-- FOTO 1 -->
 
 <section>
 
@@ -897,9 +789,7 @@ h2{
 </section>
 
 
-<!-- =====================================================
-     SEGUNDA FOTO
-===================================================== -->
+<!-- FOTO 2 -->
 
 <section>
 
@@ -930,12 +820,7 @@ h2{
 
         <div class="divider"></div>
 
-        <p
-            style="
-                text-align:center;
-                font-style:italic;
-                color:var(--rosa-oscuro);
-            ">
+        <p style="text-align:center;font-style:italic;color:var(--rosa-oscuro);">
 
             Y después, en algún momento, aparecimos nosotros.
 
@@ -946,9 +831,7 @@ h2{
 </section>
 
 
-<!-- =====================================================
-     AIRBAG
-===================================================== -->
+<!-- AIRBAG -->
 
 <section>
 
@@ -960,7 +843,7 @@ h2{
 
         <p>
             Y ahí empezaron nuestras cosas. Juntitos, de amor,
-            de cariñito, de abrazaditos y de todos esos momentos
+            de cadiñito, de abazaditos y de todos esos momentos
             que hacen que me encante estar con vos.
         </p>
 
@@ -988,24 +871,23 @@ h2{
 
             <button
                 class="music-button"
-                onclick="playSong('airbag')">
+                onclick="showSong('airbag')">
 
                 ♫ escuchar nuestro pedacito
 
             </button>
 
-            <div
-                id="player-airbag"
-                class="player">
+            <div id="player-airbag" class="player">
 
                 <video
                     id="video-airbag"
-                    preload="metadata"
+                    controls
                     playsinline
-                    controls>
+                    preload="auto"
+                    width="100%">
 
                     <source
-                        src="videos/airbag.mp4"
+                        src="./videos/airbag.mp4"
                         type="video/mp4">
 
                     Tu navegador no puede reproducir este video.
@@ -1025,9 +907,7 @@ h2{
 </section>
 
 
-<!-- =====================================================
-     ME GUSTAS MUCHO
-===================================================== -->
+<!-- VIEJAS LOCAS -->
 
 <section>
 
@@ -1066,34 +946,29 @@ h2{
 
             <button
                 class="music-button"
-                onclick="playSong('meGustas')">
+                onclick="showSong('meGustas')">
 
                 ♫ escuchar nuestro pedacito
 
             </button>
 
-            <div
-                id="player-meGustas"
-                class="player">
+            <div id="player-meGustas" class="player">
 
                 <video
                     id="video-meGustas"
-                    preload="metadata"
+                    controls
                     playsinline
-                    controls>
+                    preload="auto"
+                    width="100%">
 
                     <source
-                        src="videos/me-gustas-mucho.mp4"
+                        src="./videos/me-gustas-mucho.mp4"
                         type="video/mp4">
 
                     Tu navegador no puede reproducir este video.
 
                 </video>
 
-            </div>
-
-            <div class="note">
-                Un pedacito elegido para este momento.
             </div>
 
         </div>
@@ -1103,9 +978,7 @@ h2{
 </section>
 
 
-<!-- =====================================================
-     LAGO EN EL CIELO
-===================================================== -->
+<!-- CERATI -->
 
 <section>
 
@@ -1144,34 +1017,29 @@ h2{
 
             <button
                 class="music-button"
-                onclick="playSong('lago')">
+                onclick="showSong('lago')">
 
                 ♫ escuchar nuestro pedacito
 
             </button>
 
-            <div
-                id="player-lago"
-                class="player">
+            <div id="player-lago" class="player">
 
                 <video
                     id="video-lago"
-                    preload="metadata"
+                    controls
                     playsinline
-                    controls>
+                    preload="auto"
+                    width="100%">
 
                     <source
-                        src="videos/lago-en-el-cielo.mp4"
+                        src="./videos/lago-en-el-cielo.mp4"
                         type="video/mp4">
 
                     Tu navegador no puede reproducir este video.
 
                 </video>
 
-            </div>
-
-            <div class="note">
-                Un pedacito para vos.
             </div>
 
         </div>
@@ -1181,9 +1049,7 @@ h2{
 </section>
 
 
-<!-- =====================================================
-     WILLY COLÓN
-===================================================== -->
+<!-- WILLY COLÓN -->
 
 <section>
 
@@ -1222,34 +1088,29 @@ h2{
 
             <button
                 class="music-button"
-                onclick="playSong('hipnotizado')">
+                onclick="showSong('hipnotizado')">
 
                 ♫ escuchar nuestro pedacito
 
             </button>
 
-            <div
-                id="player-hipnotizado"
-                class="player">
+            <div id="player-hipnotizado" class="player">
 
                 <video
                     id="video-hipnotizado"
-                    preload="metadata"
+                    controls
                     playsinline
-                    controls>
+                    preload="auto"
+                    width="100%">
 
                     <source
-                        src="videos/hipnotizado.mp4"
+                        src="./videos/hipnotizado.mp4"
                         type="video/mp4">
 
                     Tu navegador no puede reproducir este video.
 
                 </video>
 
-            </div>
-
-            <div class="note">
-                Para mi tiquitita.
             </div>
 
         </div>
@@ -1259,9 +1120,7 @@ h2{
 </section>
 
 
-<!-- =====================================================
-     SILVIO RODRÍGUEZ
-===================================================== -->
+<!-- SILVIO -->
 
 <section>
 
@@ -1299,34 +1158,29 @@ h2{
 
             <button
                 class="music-button"
-                onclick="playSong('teDoyUnaCancion')">
+                onclick="showSong('teDoy')">
 
                 ♫ escuchar nuestro pedacito
 
             </button>
 
-            <div
-                id="player-teDoyUnaCancion"
-                class="player">
+            <div id="player-teDoy" class="player">
 
                 <video
-                    id="video-teDoyUnaCancion"
-                    preload="metadata"
+                    id="video-teDoy"
+                    controls
                     playsinline
-                    controls>
+                    preload="auto"
+                    width="100%">
 
                     <source
-                        src="videos/te-doy-una-cancion.mp4"
+                        src="./videos/te-doy-una-cancion.mp4"
                         type="video/mp4">
 
                     Tu navegador no puede reproducir este video.
 
                 </video>
 
-            </div>
-
-            <div class="note">
-                Para vos, mi tiquitita.
             </div>
 
         </div>
@@ -1336,9 +1190,7 @@ h2{
 </section>
 
 
-<!-- =====================================================
-     FINAL
-===================================================== -->
+<!-- FINAL -->
 
 <section class="final">
 
@@ -1365,8 +1217,6 @@ h2{
         haciendo recuerdos, riéndonos, dándonos cadiñito
         y estando juntitos.
     </p>
-
-    <!-- PASTEL FINAL -->
 
     <div
         class="birthday-cake final-cake"
@@ -1420,17 +1270,14 @@ h2{
 
 <script>
 
-/* =========================================================
-   CORAZONES FLOTANTES
-========================================================= */
+/* CORAZONES */
 
 function createFloatingHearts(){
 
     const container =
         document.getElementById("hearts-container");
 
-    const symbols =
-        ["♡","♥","✿","✨"];
+    const symbols = ["♡","♥","✿","✨"];
 
     setInterval(function(){
 
@@ -1458,9 +1305,7 @@ function createFloatingHearts(){
         container.appendChild(heart);
 
         setTimeout(function(){
-
             heart.remove();
-
         },11000);
 
     },800);
@@ -1470,9 +1315,7 @@ function createFloatingHearts(){
 createFloatingHearts();
 
 
-/* =========================================================
-   CORAZONES AL HACER CLICK
-========================================================= */
+/* CORAZONES AL HACER CLICK */
 
 document.addEventListener("click",function(e){
 
@@ -1496,50 +1339,36 @@ document.addEventListener("click",function(e){
     heart.style.top =
         e.pageY + "px";
 
-    const randX =
-        (Math.random() - .5) * 2;
-
     heart.style.setProperty(
         "--rand-x",
-        randX
+        (Math.random() - .5) * 2
     );
 
     document.body.appendChild(heart);
 
     setTimeout(function(){
-
         heart.remove();
-
     },900);
 
 });
 
 
-/* =========================================================
-   NOTITA SECRETA
-========================================================= */
+/* NOTITA */
 
 function toggleSecret(){
 
     const box =
         document.getElementById("secret-box");
 
-    if(box.style.display === "block"){
-
-        box.style.display = "none";
-
-    }else{
-
-        box.style.display = "block";
-
-    }
+    box.style.display =
+        box.style.display === "block"
+        ? "none"
+        : "block";
 
 }
 
 
-/* =========================================================
-   CONFETI
-========================================================= */
+/* CONFETI */
 
 function launchConfetti(){
 
@@ -1582,9 +1411,7 @@ function launchConfetti(){
         container.appendChild(piece);
 
         setTimeout(function(){
-
             piece.remove();
-
         },4500);
 
     }
@@ -1592,9 +1419,7 @@ function launchConfetti(){
 }
 
 
-/* =========================================================
-   FINAL: APAGAR VELITAS
-========================================================= */
+/* DESEO */
 
 function makeWish(){
 
@@ -1614,147 +1439,119 @@ function makeWish(){
 }
 
 
-/* =========================================================
-   REPRODUCTOR MP4 LOCAL
-========================================================= */
+/* ==============================
+   REPRODUCTORES LOCALES
+============================== */
 
-const songs = {
+const songPlayers = {
 
-    airbag:{
-        element:"video-airbag"
-    },
+    airbag:
+        document.getElementById("video-airbag"),
 
-    meGustas:{
-        element:"video-meGustas"
-    },
+    meGustas:
+        document.getElementById("video-meGustas"),
 
-    lago:{
-        element:"video-lago"
-    },
+    lago:
+        document.getElementById("video-lago"),
 
-    hipnotizado:{
-        element:"video-hipnotizado"
-    },
+    hipnotizado:
+        document.getElementById("video-hipnotizado"),
 
-    teDoyUnaCancion:{
-        element:"video-teDoyUnaCancion"
-    }
+    teDoy:
+        document.getElementById("video-teDoy")
 
 };
 
-let currentSong = null;
 
+function showSong(songName){
 
-function playSong(songName){
+    /*
+       Primero cerramos todos los reproductores.
+    */
 
-    const song =
-        songs[songName];
+    Object.keys(songPlayers).forEach(function(key){
 
-    if(!song){
-        return;
-    }
+        const video =
+            songPlayers[key];
 
-
-    /* Detener la canción anterior */
-
-    if(currentSong){
-
-        const oldVideo =
-            document.getElementById(
-                songs[currentSong].element
-            );
-
-        if(oldVideo){
-
-            oldVideo.pause();
-
-            oldVideo.currentTime = 0;
-
+        if(!video){
+            return;
         }
 
-        const oldBox =
-            oldVideo ?
-            oldVideo.closest(".player") :
-            null;
+        video.pause();
 
-        if(oldBox){
+        const player =
+            video.closest(".player");
 
-            oldBox.style.display =
-                "none";
-
+        if(player){
+            player.style.display = "none";
         }
 
-    }
+    });
 
+
+    /*
+       Mostramos solamente el elegido.
+    */
 
     const video =
-        document.getElementById(
-            song.element
-        );
+        songPlayers[songName];
 
     if(!video){
         return;
     }
 
-
-    const box =
+    const player =
         video.closest(".player");
 
+    if(player){
 
-    if(box){
-
-        box.style.display =
+        player.style.display =
             "block";
 
-    }
-
-
-    currentSong =
-        songName;
-
-
-    video.currentTime = 0;
-
-
-    const playPromise =
-        video.play();
-
-
-    if(playPromise !== undefined){
-
-        playPromise.catch(function(error){
-
-            console.log(
-                "La reproducción necesita interacción del usuario:",
-                error
-            );
-
+        player.scrollIntoView({
+            behavior:"smooth",
+            block:"center"
         });
 
     }
 
+    /*
+       NO hacemos video.play().
+       Así evitamos que Chrome bloquee
+       la reproducción automática.
+    */
+
+    video.load();
+
 }
 
 
-/* =========================================================
-   AL TERMINAR UN VIDEO
-========================================================= */
+/*
+   Cuando termina un video,
+   ocultamos el reproductor.
+*/
 
-document.querySelectorAll("video").forEach(function(video){
+Object.values(songPlayers).forEach(function(video){
 
-    video.addEventListener("ended",function(){
+    if(!video){
+        return;
+    }
 
-        const box =
-            video.closest(".player");
+    video.addEventListener(
+        "ended",
+        function(){
 
-        if(box){
+            const player =
+                video.closest(".player");
 
-            box.style.display =
-                "none";
+            if(player){
+                player.style.display =
+                    "none";
+            }
 
         }
-
-    });
+    );
 
 });
 
