@@ -138,10 +138,6 @@ h2{
     margin:35px auto;
 }
 
-.little{
-    font-size:.95rem;
-}
-
 .music-card{
     margin-top:30px;
     padding:25px;
@@ -237,24 +233,19 @@ h2{
 }
 
 @media(max-width:600px){
-
     section{
         padding:60px 17px;
     }
-
     .card{
         padding:25px 20px;
         border-radius:22px;
     }
-
     .hero{
         padding:30px 18px;
     }
-
     .photo{
         border-radius:20px;
     }
-
 }
 </style>
 </head>
@@ -263,169 +254,103 @@ h2{
 
 <main>
 
-<!-- =====================================================
-     PORTADA
-===================================================== -->
-
+<!-- PORTADA -->
 <section class="hero">
-
     <div class="hero-small">para vos</div>
-
     <h1>Mi tiquitita</h1>
-
     <p class="subtitle">
         Hoy es tu día, y quería hacerte algo que fuera
         un poquito más que un simple “feliz cumpleaños”.
     </p>
-
     <div class="heart">♡</div>
-
     <p class="scroll">seguí bajando</p>
-
 </section>
 
-
-<!-- =====================================================
-     ELLA DE NIÑA
-===================================================== -->
-
+<!-- ELLA DE NIÑA -->
 <section>
-
     <div class="card">
-
         <h2>Antes de nosotros</h2>
-
         <p>
             Antes de que existiera yo en tu vida,
             ya eras vos.
         </p>
-
         <p>
             Ya estaba esa niñita que después iba a crecer,
             cambiar, aprender, reírse, enojarse,
             hacer sus cosas y convertirse en la persona
             que hoy conozco y quiero tanto.
         </p>
-
         <div class="photo-wrap">
             <img src="foto1.jpg" class="photo" alt="Mi tiquitita de bebé">
             <div class="photo-caption">mi tiquitita bebé ♡</div>
         </div>
-
         <p>
             Y me da una ternura enorme ver estas fotos tuyas
             y pensar en todo lo que pasó desde ese momento
             hasta llegar a la persona que sos hoy.
         </p>
-
     </div>
-
 </section>
 
-
-<!-- =====================================================
-     SEGUNDA FOTO
-===================================================== -->
-
+<!-- SEGUNDA FOTO -->
 <section>
-
     <div class="card">
-
         <div class="photo-wrap">
             <img src="foto2.jpg" class="photo" alt="Mi tiquitita de niña">
             <div class="photo-caption">la misma tiquitita, creciendo</div>
         </div>
-
         <p>
             Me gusta conocer esas partes tuyas,
             incluso las que existían mucho antes de mí.
         </p>
-
         <p>
             Porque sos mucho más que solamente la persona
             que conocí. Sos todas esas versiones tuyas también.
         </p>
-
         <div class="divider"></div>
-
         <p>
             Y después, en algún momento,
             aparecimos nosotros.
         </p>
-
     </div>
-
 </section>
 
-
-<!-- =====================================================
-     VIEJAS LOCAS
-===================================================== -->
-
+<!-- AIRBAG: NUNCA LO OLVIDES (Nuestra canción) -->
 <section>
-
     <div class="card">
-
-        <h2>Y después nosotros</h2>
-
+        <h2>Nuestra canción</h2>
         <p>
-            Y ahí empezaron nuestras cosas.
+            Y ahí empezaron nuestras cosas. Juntitos, de amor, de cadiñito.
         </p>
-
         <p>
-            Juntitos, de amor, de cadiñito,
-            de abazaditos, adi tal cual.
-        </p>
-
-        <p>
-            Me encanta cuando nos damos cadiñito
-            y nos quedamos hablando de cualquier cosa,
-            simplemente porque me gusta estar ahí con vos.
-        </p>
-
-        <p>
-            Y sí, también me gustás muchísimo.
-            Pero más allá de eso, me gusta estar con vos,
-            conocerte y compartir mi vida con vos.
+            Esta canción es la nuestra, la que suena y me hace pensar en vos inmediatamente,
+            en lo que construimos y en cómo te metiste en mi vida para quedarte.
         </p>
 
         <div class="music-card">
+            <div class="music-title">Nunca Lo Olvides</div>
+            <div class="music-artist">Airbag</div>
 
-            <div class="music-title">Me Gustas Mucho</div>
-            <div class="music-artist">Viejas Locas</div>
-
-            <button class="music-button"
-                    onclick="playSong('viejas')">
+            <button class="music-button" onclick="playSong('airbag')">
                 ♫ escuchar nuestro pedacito
             </button>
 
-            <div id="player-viejas" class="player"></div>
+            <div id="player-airbag" class="player"></div>
 
             <div class="note">
-                Un clip corto, no la canción completa.
+                Nuestra canción especial.
             </div>
-
         </div>
-
     </div>
-
 </section>
 
-
-<!-- =====================================================
-     CERATI
-===================================================== -->
-
+<!-- CERATI -->
 <section>
-
     <div class="card">
-
         <h2>Ese puente entre nosotros</h2>
-
         <p>
             Porque hay algo que se fue construyendo entre vos y yo.
         </p>
-
         <p>
             Algo que no estaba antes y que ahora existe:
             nuestras conversaciones, nuestras miradas,
@@ -433,252 +358,156 @@ h2{
             momentos que solamente nosotros entendemos.
         </p>
 
-        <p>
-            Y me gusta muchísimo ese lugar que tenemos.
-        </p>
-
         <div class="music-card">
-
             <div class="music-title">Puente</div>
             <div class="music-artist">Gustavo Cerati</div>
 
-            <button class="music-button"
-                    onclick="playSong('cerati')">
+            <button class="music-button" onclick="playSong('cerati')">
                 ♫ escuchar nuestro pedacito
             </button>
 
             <div id="player-cerati" class="player"></div>
 
             <div class="note">
-                Clip seleccionado para esta parte de la historia.
+                Clip seleccionado sobre la conexión profunda.
             </div>
-
         </div>
-
     </div>
-
 </section>
 
-
-<!-- =====================================================
-     SPINETTA
-===================================================== -->
-
+<!-- SPINETTA -->
 <section>
-
     <div class="card">
-
         <h2>Lo que siento por vos</h2>
-
         <p>
             Y entre todas las cosas que podría decirte
             en tu cumpleaños, hay una que para mí es
-            mucho más sencilla:
+            mucho más sencilla: Te quiero muchísimo.
         </p>
-
-        <p>
-            Te quiero muchísimo.
-        </p>
-
         <p>
             Quiero seguir compartiendo cosas con vos,
-            seguir teniendo nuestros momentos,
-            seguir riéndonos, hablando, abrazándonos
-            y haciendo recuerdos juntos.
-        </p>
-
-        <p>
-            Quiero muchos años más juntitos.
+            seguir teniendo nuestros momentos y risas juntos.
         </p>
 
         <div class="music-card">
-
             <div class="music-title">Seguir viviendo sin tu amor</div>
             <div class="music-artist">Luis Alberto Spinetta</div>
 
-            <button class="music-button"
-                    onclick="playSong('spinetta')">
+            <button class="music-button" onclick="playSong('spinetta')">
                 ♫ escuchar nuestro pedacito
             </button>
 
             <div id="player-spinetta" class="player"></div>
 
             <div class="note">
-                Clip corto elegido para esta parte.
+                Clip corto sobre el cariño y la necesidad de estar juntos.
             </div>
-
         </div>
-
     </div>
-
 </section>
 
-
-<!-- =====================================================
-     DISCULPA + CHARLY
-===================================================== -->
-
+<!-- DISCULPA + CHARLY -->
 <section>
-
     <div class="card apology">
-
         <h2>Y también quería decirte algo</h2>
-
         <p>
             Sé que a veces he sido malo con vos,
             egoísta o frío, y perdón por esas veces.
         </p>
-
         <p>
             No quiero que esas cosas sean las que definan
-            lo que tenemos.
-        </p>
-
-        <p>
-            Porque te quiero, y también quiero aprender
-            a quererte cada vez mejor.
+            lo que tenemos, porque te quiero y quiero aprender a quererte cada vez mejor.
         </p>
 
         <div class="music-card">
-
             <div class="music-title">Rezo por vos</div>
-            <div class="music-artist">Charly García</div>
+            <div class="music-artist">Charly García & Luis Alberto Spinetta</div>
 
-            <button class="music-button"
-                    onclick="playSong('charly')">
+            <button class="music-button" onclick="playSong('charly')">
                 ♫ escuchar nuestro pedacito
             </button>
 
             <div id="player-charly" class="player"></div>
 
             <div class="note">
-                Un pequeño momento musical para esta parte.
+                Un pequeño momento musical para pedir perdón y cuidar lo nuestro.
             </div>
-
         </div>
-
     </div>
-
 </section>
 
-
-<!-- =====================================================
-     FUTURO + INTOXICADOS
-===================================================== -->
-
+<!-- FUTURO + INTOXICADOS -->
 <section>
-
     <div class="card future">
-
         <h2>Y todavía falta muchísimo</h2>
-
         <p>
             Quiero verte cumplir muchos cumpleaños más.
-        </p>
-
-        <p>
-            Quiero más fotos, más abrazaditos,
-            más conversaciones que empiezan hablando
-            de una cosa y terminan hablando de cualquier otra.
-        </p>
-
-        <p>
-            Más días buenos, más recuerdos,
-            más momentos nuestros.
-        </p>
-
-        <p>
-            Y cuando vengan días no tan buenos,
-            también quiero seguir estando ahí.
-        </p>
-
-        <p>
-            Porque todavía nos queda muchísimo por vivir.
+            Más fotos, más abrazaditos y más momentos nuestros.
         </p>
 
         <div class="music-card">
-
             <div class="music-title">Está saliendo el sol</div>
             <div class="music-artist">Intoxicados</div>
 
-            <button class="music-button"
-                    onclick="playSong('intoxicados')">
+            <button class="music-button" onclick="playSong('intoxicados')">
                 ♫ escuchar nuestro pedacito
             </button>
 
             <div id="player-intoxicados" class="player"></div>
 
             <div class="note">
-                Este es el último clip antes de la foto final.
+                El último clip mirando hacia adelante.
             </div>
-
         </div>
-
     </div>
-
 </section>
 
-
-<!-- =====================================================
-     FOTO FINAL
-===================================================== -->
-
+<!-- FOTO FINAL -->
 <section class="final">
-
     <div class="photo-wrap">
-        <img src="foto3.jpg"
-             class="photo"
-             alt="Nosotros">
+        <img src="foto3.jpg" class="photo" alt="Nosotros">
     </div>
-
     <h2>Feliz cumpleaños, mi tiquitita</h2>
-
     <div class="final-love">
         Te amo mucho muchísimo,<br>
         tiquitita bebé ♡
     </div>
-
 </section>
 
 </main>
 
-
-<!-- =====================================================
-     YOUTUBE IFRAME API
-===================================================== -->
-
+<!-- YOUTUBE IFRAME API -->
 <script src="https://www.youtube.com/iframe_api"></script>
 
 <script>
-
 const songs = {
 
-    viejas: {
-        videoId: "5_yMrFEAmL8",
-        start: 24,
-        end: 43
+    airbag: {
+        videoId: "ue0RP3C1Brg", // Airbag - Nunca Lo Olvides
+        start: 55,
+        end: 75
     },
 
     cerati: {
-        videoId: "eAO7CEcCD3s",
+        videoId: "eAO7CEcCD3s", // Gustavo Cerati - Puente
         start: 45,
         end: 64
     },
 
     spinetta: {
-        videoId: "MA8-Ld8zYkk",
+        videoId: "MA8-Ld8zYkk", // Luis Alberto Spinetta - Seguir viviendo sin tu amor
         start: 35,
         end: 54
     },
 
     charly: {
-        videoId: "0Rf_3FgPtcA",
+        videoId: "0Rf_3FgPtcA", // Charly García y Spinetta - Rezo por vos
         start: 68,
         end: 86
     },
 
     intoxicados: {
-        videoId: "yVvUvl7sbo8",
+        videoId: "yVvUvl7sbo8", // Intoxicados - Está saliendo el sol
         start: 31,
         end: 50
     }
@@ -689,14 +518,9 @@ const players = {};
 let currentSong = null;
 let stopTimer = null;
 
-
 function playSong(songName){
-
     const song = songs[songName];
-
-    if(!song){
-        return;
-    }
+    if(!song){ return; }
 
     if(stopTimer){
         clearTimeout(stopTimer);
@@ -704,90 +528,58 @@ function playSong(songName){
     }
 
     if(currentSong && currentSong !== songName){
-
         const oldPlayer = players[currentSong];
-
         if(oldPlayer && typeof oldPlayer.stopVideo === "function"){
             oldPlayer.stopVideo();
         }
-
-        const oldBox = document.getElementById(
-            "player-" + currentSong
-        );
-
+        const oldBox = document.getElementById("player-" + currentSong);
         if(oldBox){
             oldBox.style.display = "none";
         }
     }
 
     currentSong = songName;
-
-    const box = document.getElementById(
-        "player-" + songName
-    );
-
-    if(!box){
-        return;
-    }
+    const box = document.getElementById("player-" + songName);
+    if(!box){ return; }
 
     box.style.display = "block";
 
     if(!players[songName]){
-
-        players[songName] = new YT.Player(
-            box,
-            {
-                videoId: song.videoId,
-
-                playerVars: {
-                    autoplay: 1,
-                    controls: 1,
-                    rel: 0,
-                    modestbranding: 1,
-                    playsinline: 1,
-                    enablejsapi: 1,
-                    origin: window.location.origin
-                },
-
-                events: {
-
-                    onReady: function(event){
-
-                        event.target.loadVideoById({
-                            videoId: song.videoId,
-                            startSeconds: song.start,
-                            endSeconds: song.end
-                        });
-
-                    }
-
+        players[songName] = new YT.Player(box, {
+            videoId: song.videoId,
+            playerVars: {
+                autoplay: 1,
+                controls: 1,
+                rel: 0,
+                modestbranding: 1,
+                playsinline: 1,
+                enablejsapi: 1,
+                origin: window.location.origin
+            },
+            events: {
+                onReady: function(event){
+                    event.target.loadVideoById({
+                        videoId: song.videoId,
+                        startSeconds: song.start,
+                        endSeconds: song.end
+                    });
                 }
             }
-        );
-
+        });
     } else {
-
         players[songName].loadVideoById({
             videoId: song.videoId,
             startSeconds: song.start,
             endSeconds: song.end
         });
-
     }
 
     stopTimer = setTimeout(function(){
-
-        if(players[songName] &&
-           typeof players[songName].pauseVideo === "function"){
-
+        if(players[songName] && typeof players[songName].pauseVideo === "function"){
             players[songName].pauseVideo();
-
         }
-
     }, (song.end - song.start) * 1000);
-
 }
-
 </script>
 
 </body>
