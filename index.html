@@ -40,6 +40,7 @@ body{
     font-family:"DM Sans",sans-serif;
     line-height:1.7;
     overflow-x:hidden;
+    cursor:default;
 }
 
 /* EFECTO DE CORAZONES FLOTANTES EN EL FONDO */
@@ -56,7 +57,7 @@ body{
 
 .f-heart{
     position:absolute;
-    color:rgba(217,143,166,0.22);
+    color:rgba(217,143,166,0.25);
     font-size:1.5rem;
     animation:floatUp 10s linear infinite;
     bottom:-50px;
@@ -75,6 +76,27 @@ body{
     }
     100%{
         transform:translateY(-110vh) rotate(360deg) scale(1.2);
+        opacity:0;
+    }
+}
+
+/* CORAZONES AL HACER CLIC EN LA PANTALLA */
+.click-heart{
+    position:absolute;
+    color:var(--rosa-oscuro);
+    font-size:1.4rem;
+    pointer-events:none;
+    z-index:9999;
+    animation:burstUp 0.9s ease-out forwards;
+}
+
+@keyframes burstUp{
+    0%{
+        transform:translate(0, 0) scale(0.5);
+        opacity:1;
+    }
+    100%{
+        transform:translate(calc(var(--rand-x) * 40px), -70px) scale(1.3);
         opacity:0;
     }
 }
@@ -151,8 +173,8 @@ h2{
 }
 
 .card{
-    background:rgba(255,255,255,0.85);
-    border:1px solid rgba(217,143,166,0.3);
+    background:rgba(255,255,255,0.88);
+    border:1px solid rgba(217,143,166,0.35);
     border-radius:32px;
     padding:45px 35px;
     box-shadow:0 20px 60px rgba(100,50,70,0.08);
@@ -163,6 +185,45 @@ h2{
 .card:hover{
     transform: translateY(-4px);
     box-shadow:0 25px 70px rgba(100,50,70,0.12);
+}
+
+/* BOTÓN INTERACTIVO DE SORPRESA */
+.interactive-surprise-btn{
+    margin-top:25px;
+    background:var(--blanco);
+    border:2px solid var(--rosa);
+    color:var(--vino);
+    padding:12px 24px;
+    border-radius:99px;
+    cursor:pointer;
+    font-family:inherit;
+    font-size:.95rem;
+    font-weight:600;
+    box-shadow:0 5px 15px rgba(181,101,128,0.15);
+    transition: all 0.25s ease;
+}
+
+.interactive-surprise-btn:hover{
+    background:var(--rosa-claro);
+    transform: scale(1.04);
+}
+
+.secret-note{
+    display:none;
+    margin-top:18px;
+    background:var(--rosa-claro);
+    padding:20px;
+    border-radius:20px;
+    border-left:4px solid var(--rosa-oscuro);
+    font-size:1rem;
+    color:var(--vino);
+    font-style:italic;
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn{
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .photo-wrap{
@@ -179,11 +240,12 @@ h2{
     display:block;
     margin:auto;
     box-shadow:0 18px 40px rgba(80,40,55,0.18);
-    transition: transform 0.4s ease;
+    transition: transform 0.4s ease, filter 0.4s ease;
 }
 
 .photo:hover{
-    transform: scale(1.015);
+    transform: scale(1.02);
+    filter: brightness(1.03);
 }
 
 .photo-caption{
@@ -208,6 +270,11 @@ h2{
     background:var(--blanco);
     border:1px solid #f0d8e2;
     box-shadow:0 12px 30px rgba(90,40,60,0.06);
+    transition: transform 0.2s ease;
+}
+
+.music-card:hover{
+    transform: translateY(-2px);
 }
 
 .music-title{
@@ -239,7 +306,7 @@ h2{
 }
 
 .music-button:hover{
-    transform: translateY(-2px);
+    transform: scale(1.05);
     box-shadow:0 8px 25px rgba(99,55,71,0.35);
 }
 
@@ -336,7 +403,16 @@ h2{
         Hoy es tu cumpleaños, y armé este detallito exclusivo para vos,
         con todo mi cariño.
     </p>
-    <div class="heart-icon">♡</div>
+    
+    <!-- BOTÓN INTERACTIVO SORPRESA -->
+    <button class="interactive-surprise-btn" onclick="toggleSecret()">
+        💌 Toca aquí para una sorpresita
+    </button>
+    <div id="secret-box" class="secret-note">
+        "Cada instante a tu lado es mi regalo favorito. Gracias por existir y por ser mi tiquitita hermosa. ♡"
+    </div>
+
+    <div class="heart-icon" style="margin-top:35px;">♡</div>
     <p class="scroll">desliza hacia abajo</p>
 </section>
 
@@ -350,7 +426,7 @@ h2{
         <p>
             Ya estaba esa niñita hermosa que después iba a crecer, aprender, sonreír,
             hacer sus cosas y convertirse en la mujer maravillosa
-            que hoy conozco y amo tanto.
+            yang hoy conozco y amo tanto.
         </p>
         <div class="photo-wrap">
             <img src="foto1.jpg" class="photo" alt="Mi tiquitita de bebé">
@@ -383,7 +459,7 @@ h2{
     </div>
 </section>
 
-<!-- AIRBAG: NUNCA LO OLVIDES (Nuestra canción principal) -->
+<!-- AIRBAG: NUNCA LO OLVIDES (Ajustado exactamente en "Nunca lo olvides, que te doy...") -->
 <section>
     <div class="card">
         <h2>Nuestra canción</h2>
@@ -497,7 +573,7 @@ h2{
     </div>
 </section>
 
-<!-- FUTURO + INTOXICADOS -->
+<!-- GUSTAVO CERATI: CRIMEN (Reemplazando a Intoxicados por puro amor de Cerati) -->
 <section>
     <div class="card future">
         <h2>Y todavía nos queda muchísimo</h2>
@@ -507,17 +583,17 @@ h2{
         </p>
 
         <div class="music-card">
-            <div class="music-title">Está saliendo el sol</div>
-            <div class="music-artist">Intoxicados</div>
+            <div class="music-title">Crimen</div>
+            <div class="music-artist">Gustavo Cerati</div>
 
-            <button class="music-button" onclick="playSong('intoxicados')">
+            <button class="music-button" onclick="playSong('cerati')">
                 ♫ escuchar nuestro pedacito
             </button>
 
-            <div id="player-intoxicados" class="player"></div>
+            <div id="player-cerati" class="player"></div>
 
             <div class="note">
-                El último clip mirando hacia adelante.
+                Un clásico hermoso de amor para vos.
             </div>
         </div>
     </div>
@@ -542,7 +618,7 @@ h2{
 <script src="https://www.youtube.com/iframe_api"></script>
 
 <script>
-/* GENERADOR DINÁMICO DE CORAZONES FLOTANTES */
+/* GENERADOR DINÁMICO DE CORAZONES FLOTANTES DE FONDO */
 function createFloatingHearts(){
     const container = document.getElementById('hearts-container');
     const symbols = ['♡', '♥', '✿', '✨'];
@@ -563,13 +639,44 @@ function createFloatingHearts(){
 }
 createFloatingHearts();
 
-/* REPRODUCTOR DE MÚSICA */
+/* EFECTO INTERACTIVO: CORAZONES AL HACER CLIC EN LA PANTALLA */
+document.addEventListener('click', function(e){
+    if(e.target.tagName === 'IFRAME' || e.target.closest('button')) return;
+
+    const heart = document.createElement('div');
+    heart.classList.add('click-heart');
+    heart.innerHTML = '♡';
+    
+    heart.style.left = e.pageX + 'px';
+    heart.style.top = e.pageY + 'px';
+    
+    const randX = (Math.random() - 0.5) * 2;
+    heart.style.setProperty('--rand-x', randX);
+    
+    document.body.appendChild(heart);
+    
+    setTimeout(() => {
+        heart.remove();
+    }, 900);
+});
+
+/* MOSTRAR/OCULTAR NOTITA SECRETA */
+function toggleSecret(){
+    const box = document.getElementById('secret-box');
+    if(box.style.display === 'block'){
+        box.style.display = 'none';
+    } else {
+        box.style.display = 'block';
+    }
+}
+
+/* REPRODUCTOR DE MÚSICA CON MARCAS DE TIEMPO EXACTAS */
 const songs = {
-    airbag: { videoId: "ue0RP3C1Brg", start: 55, end: 75 },
+    airbag: { videoId: "ue0RP3C1Brg", start: 68, end: 88 },  /* Ajustado exacto en "Nunca lo olvides, que te doy..." */
     viejaslocas: { videoId: "qpkBCLsk6uc", start: 25, end: 45 },
     spinetta: { videoId: "MA8-Ld8zYkk", start: 35, end: 54 },
     abel: { videoId: "BVe701eFS8E", start: 40, end: 60 },
-    intoxicados: { videoId: "yVvUvl7sbo8", start: 31, end: 50 }
+    cerati: { videoId: "xyv-R6z609E", start: 50, end: 70 }  /* Cerati - Crimen */
 };
 
 const players = {};
