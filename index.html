@@ -3,15 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Para mi tiquitita ♡</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
+:root{
+    --rosa:#d98fa6;
+    --rosa-claro:#f8e7ed;
+    --rosa-suave:#fff7fa;
+    --vino:#633747;
+    --texto:#49343b;
+    --blanco:#fffdfd;
+}
 
 *{
     box-sizing:border-box;
-    margin:0;
-    padding:0;
 }
 
 html{
@@ -19,554 +29,623 @@ html{
 }
 
 body{
-    background:#fff8fb;
-    color:#493c45;
-    font-family:'DM Sans',sans-serif;
-    overflow-x:hidden;
+    margin:0;
+    background:
+        radial-gradient(circle at 15% 10%, #ffeef4 0, transparent 25%),
+        radial-gradient(circle at 85% 30%, #f8e3eb 0, transparent 25%),
+        var(--rosa-suave);
+    color:var(--texto);
+    font-family:"DM Sans",sans-serif;
+    line-height:1.7;
 }
 
-.page{
-    max-width:850px;
-    margin:auto;
-    padding:25px 18px 70px;
-}
-
-.hero{
-    min-height:88vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    position:relative;
-}
-
-.small{
-    font-size:.82rem;
-    letter-spacing:3px;
-    text-transform:uppercase;
-    color:#ad8fa1;
-    margin-bottom:18px;
-}
-
-h1{
-    font-family:'Playfair Display',serif;
-    font-size:clamp(3.2rem,10vw,6rem);
-    font-weight:500;
-    color:#705566;
-    line-height:1;
-}
-
-.hero p{
-    max-width:500px;
-    margin:25px auto 0;
-    line-height:1.8;
-    color:#786a73;
-}
-
-.heart{
-    margin-top:35px;
-    font-size:1.5rem;
-    animation:pulse 2s infinite;
-}
-
-@keyframes pulse{
-    50%{transform:scale(1.12);}
+main{
+    width:100%;
+    overflow:hidden;
 }
 
 section{
-    margin:100px 0;
+    max-width:900px;
+    margin:auto;
+    padding:75px 22px;
 }
 
-.section-number{
-    font-size:.75rem;
-    letter-spacing:3px;
-    color:#b797a9;
-    margin-bottom:12px;
-}
-
-h2{
-    font-family:'Playfair Display',serif;
-    font-size:clamp(2rem,7vw,3.3rem);
-    font-weight:500;
-    color:#705566;
-    margin-bottom:20px;
-}
-
-.text{
-    font-size:1.05rem;
-    line-height:1.9;
-    color:#62565e;
-}
-
-.photo{
-    width:100%;
-    max-width:620px;
-    margin:35px auto;
-    border-radius:28px;
-    overflow:hidden;
-    background:#f1e3ea;
-    min-height:400px;
+.hero{
+    min-height:100vh;
     display:flex;
+    flex-direction:column;
     align-items:center;
     justify-content:center;
-    box-shadow:0 18px 50px rgba(92,65,80,.10);
-}
-
-.photo img{
-    width:100%;
-    display:block;
-    object-fit:cover;
-}
-
-.photo-placeholder{
     text-align:center;
-    padding:40px;
-    color:#a48c99;
+    padding:40px 20px;
+    position:relative;
 }
 
-.photo-placeholder strong{
-    display:block;
-    font-family:'Playfair Display',serif;
-    font-size:1.5rem;
-    margin-bottom:8px;
-}
-
-.song{
-    margin:40px 0;
-    padding:24px;
-    border-radius:25px;
-    background:rgba(255,255,255,.72);
-    border:1px solid #eadde4;
-    box-shadow:0 12px 35px rgba(80,50,70,.06);
-}
-
-.song-info{
+.hero-small{
+    font-size:.85rem;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    color:var(--rosa);
     margin-bottom:18px;
 }
 
-.song-title{
-    font-family:'Playfair Display',serif;
+h1,h2{
+    font-family:"Playfair Display",serif;
+    color:var(--vino);
+    font-weight:500;
+}
+
+h1{
+    font-size:clamp(3rem,9vw,6rem);
+    line-height:1;
+    margin:0;
+}
+
+h2{
+    font-size:clamp(2rem,6vw,3.3rem);
+    margin:0 0 25px;
+}
+
+.subtitle{
+    max-width:620px;
+    margin:25px auto 0;
+    font-size:1.08rem;
+}
+
+.scroll{
+    margin-top:50px;
+    font-size:.8rem;
+    letter-spacing:2px;
+    opacity:.65;
+}
+
+.card{
+    background:rgba(255,255,255,.72);
+    border:1px solid rgba(217,143,166,.25);
+    border-radius:28px;
+    padding:35px;
+    box-shadow:0 15px 50px rgba(100,50,70,.08);
+    backdrop-filter:blur(8px);
+}
+
+.photo-wrap{
+    width:100%;
+    margin:30px auto;
+    text-align:center;
+}
+
+.photo{
+    width:min(100%,650px);
+    max-height:700px;
+    object-fit:cover;
+    border-radius:26px;
+    display:block;
+    margin:auto;
+    box-shadow:0 20px 45px rgba(80,40,55,.16);
+}
+
+.photo-caption{
+    margin-top:13px;
+    font-size:.85rem;
+    color:#9b6878;
+    font-style:italic;
+}
+
+.divider{
+    width:70px;
+    height:1px;
+    background:var(--rosa);
+    margin:35px auto;
+}
+
+.little{
+    font-size:.95rem;
+}
+
+.music-card{
+    margin-top:30px;
+    padding:25px;
+    border-radius:25px;
+    background:#fff;
+    border:1px solid #efd6df;
+    box-shadow:0 12px 35px rgba(90,40,60,.08);
+}
+
+.music-title{
+    font-family:"Playfair Display",serif;
     font-size:1.45rem;
-    color:#705566;
+    color:var(--vino);
+    margin-bottom:5px;
 }
 
-.artist{
-    color:#a08795;
-    font-size:.9rem;
-    margin-top:4px;
+.music-artist{
+    font-size:.88rem;
+    color:#a06d7e;
+    margin-bottom:18px;
 }
 
-.song-note{
-    margin:15px 0;
-    line-height:1.7;
-    color:#74666f;
-}
-
-.listen{
+.music-button{
     border:0;
+    background:var(--vino);
+    color:white;
+    padding:12px 21px;
     border-radius:999px;
-    padding:13px 20px;
-    background:#dfc1d1;
-    color:#594452;
-    font-family:inherit;
-    font-weight:600;
     cursor:pointer;
+    font-family:inherit;
+    font-size:.9rem;
     transition:.2s;
 }
 
-.listen:hover{
+.music-button:hover{
     transform:translateY(-2px);
-    background:#d4b1c5;
+    opacity:.92;
 }
 
 .player{
-    margin-top:18px;
-    width:100%;
-    aspect-ratio:16/9;
+    display:none;
+    margin-top:20px;
     border-radius:18px;
     overflow:hidden;
-    display:none;
-}
-
-.player.active{
-    display:block;
+    background:#111;
 }
 
 .player iframe{
     width:100%;
-    height:100%;
+    aspect-ratio:16/9;
     border:0;
+    display:block;
+}
+
+.note{
+    margin-top:12px;
+    font-size:.75rem;
+    color:#98717d;
 }
 
 .apology{
-    padding:30px;
-    border-left:3px solid #d9bdcd;
-    background:#fff;
-    border-radius:0 22px 22px 0;
+    text-align:center;
+}
+
+.future{
+    text-align:center;
 }
 
 .final{
-    min-height:85vh;
+    min-height:100vh;
     display:flex;
     flex-direction:column;
-    align-items:center;
     justify-content:center;
     text-align:center;
 }
 
-.final .photo{
-    max-width:500px;
-    min-height:330px;
-}
-
 .final h2{
-    margin-top:35px;
+    margin-bottom:10px;
 }
 
 .final-love{
-    font-family:'Playfair Display',serif;
-    font-style:italic;
-    font-size:clamp(1.6rem,5vw,2.4rem);
-    color:#705566;
-    line-height:1.5;
+    font-family:"Playfair Display",serif;
+    font-size:clamp(1.7rem,5vw,2.7rem);
+    line-height:1.45;
+    color:var(--vino);
     margin-top:25px;
 }
 
-.divider{
-    text-align:center;
-    color:#c8aab9;
-    font-size:1.2rem;
-    margin:70px 0;
+.heart{
+    font-size:2rem;
+    color:var(--rosa);
+    margin:20px 0;
+}
+
+@media(max-width:600px){
+
+    section{
+        padding:60px 17px;
+    }
+
+    .card{
+        padding:25px 20px;
+        border-radius:22px;
+    }
+
+    .hero{
+        padding:30px 18px;
+    }
+
+    .photo{
+        border-radius:20px;
+    }
+
 }
 </style>
 </head>
 
 <body>
 
-<div class="page">
+<main>
 
-    <!-- INTRO -->
-    <div class="hero">
+<!-- =====================================================
+     PORTADA
+===================================================== -->
 
-        <div class="small">para vos ♡</div>
+<section class="hero">
 
-        <h1>Mi tiquitita</h1>
+    <div class="hero-small">para vos</div>
+
+    <h1>Mi tiquitita</h1>
+
+    <p class="subtitle">
+        Hoy es tu día, y quería hacerte algo que fuera
+        un poquito más que un simple “feliz cumpleaños”.
+    </p>
+
+    <div class="heart">♡</div>
+
+    <p class="scroll">seguí bajando</p>
+
+</section>
+
+
+<!-- =====================================================
+     ELLA DE NIÑA
+===================================================== -->
+
+<section>
+
+    <div class="card">
+
+        <h2>Antes de nosotros</h2>
 
         <p>
-            Hoy es tu día y quería hacerte algo que se sintiera un poquito
-            como nosotros. Algo hecho para vos, con tus fotos, nuestras
-            canciones y todo ese cadiñito que tenemos.
+            Antes de que existiera yo en tu vida,
+            ya eras vos.
         </p>
 
-        <div class="heart">♡</div>
+        <p>
+            Ya estaba esa niñita que después iba a crecer,
+            cambiar, aprender, reírse, enojarse,
+            hacer sus cosas y convertirse en la persona
+            que hoy conozco y quiero tanto.
+        </p>
+
+        <div class="photo-wrap">
+            <img src="foto1.jpg" class="photo" alt="Mi tiquitita de bebé">
+            <div class="photo-caption">mi tiquitita bebé ♡</div>
+        </div>
+
+        <p>
+            Y me da una ternura enorme ver estas fotos tuyas
+            y pensar en todo lo que pasó desde ese momento
+            hasta llegar a la persona que sos hoy.
+        </p>
 
     </div>
 
+</section>
 
-    <!-- FOTO 1 -->
-    <section>
 
-        <div class="section-number">01 — antes de nosotros</div>
+<!-- =====================================================
+     SEGUNDA FOTO
+===================================================== -->
 
-        <h2>La tiquitita bebé</h2>
+<section>
 
-        <div class="photo">
+    <div class="card">
 
-            <!-- CAMBIÁ foto1.jpg POR TU PRIMERA FOTO -->
-            <img src="foto1.jpg"
-                 alt="Mi tiquitita de bebé"
-                 onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
-
-            <div class="photo-placeholder" style="display:none;">
-                <strong>Tu primera fotito</strong>
-                Poné acá la foto de ella de bebé
-            </div>
-
+        <div class="photo-wrap">
+            <img src="foto2.jpg" class="photo" alt="Mi tiquitita de niña">
+            <div class="photo-caption">la misma tiquitita, creciendo</div>
         </div>
 
-        <p class="text">
-            Antes de conocerte, vos ya tenías toda una historia.
-            Y me da una ternura enorme ver a esa tiquitita bebé y pensar
-            en todo lo que viviste hasta llegar a ser la persona que hoy
-            tengo la suerte de amar.
+        <p>
+            Me gusta conocer esas partes tuyas,
+            incluso las que existían mucho antes de mí.
         </p>
 
-    </section>
-
-
-    <!-- FOTO 2 -->
-    <section>
-
-        <div class="section-number">02 — creciendo</div>
-
-        <h2>Y después fuiste creciendo...</h2>
-
-        <div class="photo">
-
-            <!-- CAMBIÁ foto2.jpg POR TU SEGUNDA FOTO -->
-            <img src="foto2.jpg"
-                 alt="Mi tiquitita"
-                 onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
-
-            <div class="photo-placeholder" style="display:none;">
-                <strong>Otra fotito tuya</strong>
-                Poné acá la segunda foto
-            </div>
-
-        </div>
-
-        <p class="text">
-            Fuiste creciendo, viviendo tus cosas, descubriendo lo que te
-            gusta, cambiando poquito a poquito... y algún día, entre todas
-            esas vueltas, aparecimos nosotros.
+        <p>
+            Porque sos mucho más que solamente la persona
+            que conocí. Sos todas esas versiones tuyas también.
         </p>
 
-    </section>
+        <div class="divider"></div>
 
-
-    <div class="divider">♡ ♡ ♡</div>
-
-
-    <!-- NOSOTROS -->
-    <section>
-
-        <div class="section-number">03 — nosotros</div>
-
-        <h2>Y después aparecimos nosotros</h2>
-
-        <p class="text">
-            Me encanta estar juntito con vos. Me encanta cuando nos damos
-            cadiñito y nos quedamos hablando de cualquier cosa, simplemente
-            porque me gusta estar ahí con vos.
+        <p>
+            Y después, en algún momento,
+            aparecimos nosotros.
         </p>
 
-        <br>
+    </div>
 
-        <p class="text">
-            Me encantan tus abazaditos, nuestros momentos de amor y esas
-            veces en las que estamos juntitos sin necesitar hacer nada
-            especial. Adi tal cual. Solamente vos y yo.
+</section>
+
+
+<!-- =====================================================
+     VIEJAS LOCAS
+===================================================== -->
+
+<section>
+
+    <div class="card">
+
+        <h2>Y después nosotros</h2>
+
+        <p>
+            Y ahí empezaron nuestras cosas.
         </p>
 
-    </section>
-
-
-    <!-- AIRBAG -->
-    <section>
-
-        <div class="section-number">04 — esta me hace pensar en nosotros</div>
-
-        <h2>Nunca Lo Olvides</h2>
-
-        <p class="text">
-            Hay canciones que simplemente quedan pegadas a una persona.
-            Y esta es una de esas para mí.
+        <p>
+            Juntitos, de amor, de cadiñito,
+            de abazaditos, adi tal cual.
         </p>
 
-        <div class="song">
+        <p>
+            Me encanta cuando nos damos cadiñito
+            y nos quedamos hablando de cualquier cosa,
+            simplemente porque me gusta estar ahí con vos.
+        </p>
 
-            <div class="song-info">
-                <div class="song-title">Nunca Lo Olvides</div>
-                <div class="artist">Airbag</div>
-            </div>
+        <p>
+            Y sí, también me gustás muchísimo.
+            Pero más allá de eso, me gusta estar con vos,
+            conocerte y compartir mi vida con vos.
+        </p>
 
-            <p class="song-note">
-                ♡ Tocá acá y escuchá un pedacito.
-            </p>
+        <div class="music-card">
 
-            <button class="listen"
-                onclick="playSong('airbag', 0, 30)">
-                ♫ Tocá acá
+            <div class="music-title">Me Gustas Mucho</div>
+            <div class="music-artist">Viejas Locas</div>
+
+            <button class="music-button"
+                    onclick="playSong('viejas')">
+                ♫ escuchar nuestro pedacito
             </button>
 
-            <div class="player" id="player-airbag"></div>
+            <div id="player-viejas" class="player"></div>
+
+            <div class="note">
+                Un clip corto, no la canción completa.
+            </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- LOS CAFRES -->
-    <section>
+<!-- =====================================================
+     CERATI
+===================================================== -->
 
-        <div class="section-number">05 — tus ojos</div>
+<section>
 
-        <h2>Y esta también sos vos</h2>
+    <div class="card">
 
-        <p class="text">
-            Hay algo de esta canción que me hace pensar muchísimo en vos.
-            En mirarte, estar cerquita y simplemente disfrutar de tenerte
-            conmigo.
+        <h2>Ese puente entre nosotros</h2>
+
+        <p>
+            Porque hay algo que se fue construyendo entre vos y yo.
         </p>
 
-        <div class="song">
-
-            <div class="song-info">
-                <div class="song-title">Tus Ojos</div>
-                <div class="artist">Los Cafres</div>
-            </div>
-
-            <p class="song-note">
-                ♡ Un pedacito para vos.
-            </p>
-
-            <button class="listen"
-                onclick="playSong('cafres', 0, 30)">
-                ♫ Tocá acá
-            </button>
-
-            <div class="player" id="player-cafres"></div>
-
-        </div>
-
-    </section>
-
-
-    <!-- SABINA -->
-    <section>
-
-        <div class="section-number">06 — porque sos vos</div>
-
-        <h2>Contigo</h2>
-
-        <p class="text">
-            Y si hay algo que me gusta de nosotros es que no necesito
-            que todo sea perfecto. Me gusta compartir la vida con vos,
-            desde las cosas más lindas hasta esas pequeñas cosas que
-            solamente nosotros entendemos.
+        <p>
+            Algo que no estaba antes y que ahora existe:
+            nuestras conversaciones, nuestras miradas,
+            nuestras formas de darnos cariño y todos esos
+            momentos que solamente nosotros entendemos.
         </p>
 
-        <div class="song">
-
-            <div class="song-info">
-                <div class="song-title">Contigo</div>
-                <div class="artist">Joaquín Sabina</div>
-            </div>
-
-            <button class="listen"
-                onclick="playSong('sabina', 0, 30)">
-                ♫ Tocá acá
-            </button>
-
-            <div class="player" id="player-sabina"></div>
-
-        </div>
-
-    </section>
-
-
-    <!-- DISCULPA -->
-    <section>
-
-        <div class="section-number">07 — una cosita que quería decirte</div>
-
-        <div class="apology">
-
-            <h2>También te quiero pedir perdón</h2>
-
-            <p class="text">
-                Sé que a veces he sido malo con vos, egoísta o frío,
-                y perdón por esas veces. No quiero que esto sea el centro
-                de lo que te estoy diciendo hoy; solamente quería
-                reconocerlo porque te amo y porque quiero tratarte
-                siempre mejor.
-            </p>
-
-        </div>
-
-        <div class="song">
-
-            <div class="song-info">
-                <div class="song-title">Estrechez de corazón</div>
-                <div class="artist">Los Prisioneros</div>
-            </div>
-
-            <p class="song-note">
-                Esta queda acá porque también habla de esas partes
-                que a veces nos cuesta decir.
-            </p>
-
-            <button class="listen"
-                onclick="playSong('prisioneros', 0, 30)">
-                ♫ Tocá acá
-            </button>
-
-            <div class="player" id="player-prisioneros"></div>
-
-        </div>
-
-    </section>
-
-
-    <!-- FUTURO -->
-    <section>
-
-        <div class="section-number">08 — lo que quiero</div>
-
-        <h2>Muchos años más juntitos</h2>
-
-        <p class="text">
-            Quiero muchos años más pudiendo decirte tiquitita.
-            Quiero más cumpleaños tuyos, más fotos, más cadiñito,
-            más abazaditos, más conversaciones, más risas, más días
-            juntos y más de nosotros.
+        <p>
+            Y me gusta muchísimo ese lugar que tenemos.
         </p>
 
-        <div class="song">
+        <div class="music-card">
 
-            <div class="song-info">
-                <div class="song-title">Está saliendo el sol</div>
-                <div class="artist">Intoxicados</div>
-            </div>
+            <div class="music-title">Puente</div>
+            <div class="music-artist">Gustavo Cerati</div>
 
-            <p class="song-note">
-                Y porque después de todo, quiero seguir compartiendo
-                muchos días con vos.
-            </p>
-
-            <button class="listen"
-                onclick="playSong('intoxicados', 0, 30)">
-                ♫ Tocá acá
+            <button class="music-button"
+                    onclick="playSong('cerati')">
+                ♫ escuchar nuestro pedacito
             </button>
 
-            <div class="player" id="player-intoxicados"></div>
+            <div id="player-cerati" class="player"></div>
 
-        </div>
-
-    </section>
-
-
-    <!-- FOTO FINAL -->
-    <section class="final">
-
-        <div class="small">y llegamos hasta acá...</div>
-
-        <div class="photo">
-
-            <!-- CAMBIÁ foto3.jpg POR LA FOTO MÁS ACTUAL -->
-            <img src="foto3.jpg"
-                 alt="Nosotros"
-                 onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
-
-            <div class="photo-placeholder" style="display:none;">
-                <strong>Tu fotito actual</strong>
-                Poné acá la tercera foto
+            <div class="note">
+                Clip seleccionado para esta parte de la historia.
             </div>
 
         </div>
 
-        <h2>Feliz cumpleaños, mi tiquitita</h2>
+    </div>
 
-        <div class="final-love">
-            Te amo mucho muchísimo,<br>
-            tiquitita bebé ♡
+</section>
+
+
+<!-- =====================================================
+     SPINETTA
+===================================================== -->
+
+<section>
+
+    <div class="card">
+
+        <h2>Lo que siento por vos</h2>
+
+        <p>
+            Y entre todas las cosas que podría decirte
+            en tu cumpleaños, hay una que para mí es
+            mucho más sencilla:
+        </p>
+
+        <p>
+            Te quiero muchísimo.
+        </p>
+
+        <p>
+            Quiero seguir compartiendo cosas con vos,
+            seguir teniendo nuestros momentos,
+            seguir riéndonos, hablando, abrazándonos
+            y haciendo recuerdos juntos.
+        </p>
+
+        <p>
+            Quiero muchos años más juntitos.
+        </p>
+
+        <div class="music-card">
+
+            <div class="music-title">Seguir viviendo sin tu amor</div>
+            <div class="music-artist">Luis Alberto Spinetta</div>
+
+            <button class="music-button"
+                    onclick="playSong('spinetta')">
+                ♫ escuchar nuestro pedacito
+            </button>
+
+            <div id="player-spinetta" class="player"></div>
+
+            <div class="note">
+                Clip corto elegido para esta parte.
+            </div>
+
         </div>
 
-    </section>
+    </div>
 
-</div>
+</section>
 
+
+<!-- =====================================================
+     DISCULPA + CHARLY
+===================================================== -->
+
+<section>
+
+    <div class="card apology">
+
+        <h2>Y también quería decirte algo</h2>
+
+        <p>
+            Sé que a veces he sido malo con vos,
+            egoísta o frío, y perdón por esas veces.
+        </p>
+
+        <p>
+            No quiero que esas cosas sean las que definan
+            lo que tenemos.
+        </p>
+
+        <p>
+            Porque te quiero, y también quiero aprender
+            a quererte cada vez mejor.
+        </p>
+
+        <div class="music-card">
+
+            <div class="music-title">Rezo por vos</div>
+            <div class="music-artist">Charly García</div>
+
+            <button class="music-button"
+                    onclick="playSong('charly')">
+                ♫ escuchar nuestro pedacito
+            </button>
+
+            <div id="player-charly" class="player"></div>
+
+            <div class="note">
+                Un pequeño momento musical para esta parte.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FUTURO + INTOXICADOS
+===================================================== -->
+
+<section>
+
+    <div class="card future">
+
+        <h2>Y todavía falta muchísimo</h2>
+
+        <p>
+            Quiero verte cumplir muchos cumpleaños más.
+        </p>
+
+        <p>
+            Quiero más fotos, más abrazaditos,
+            más conversaciones que empiezan hablando
+            de una cosa y terminan hablando de cualquier otra.
+        </p>
+
+        <p>
+            Más días buenos, más recuerdos,
+            más momentos nuestros.
+        </p>
+
+        <p>
+            Y cuando vengan días no tan buenos,
+            también quiero seguir estando ahí.
+        </p>
+
+        <p>
+            Porque todavía nos queda muchísimo por vivir.
+        </p>
+
+        <div class="music-card">
+
+            <div class="music-title">Está saliendo el sol</div>
+            <div class="music-artist">Intoxicados</div>
+
+            <button class="music-button"
+                    onclick="playSong('intoxicados')">
+                ♫ escuchar nuestro pedacito
+            </button>
+
+            <div id="player-intoxicados" class="player"></div>
+
+            <div class="note">
+                Este es el último clip antes de la foto final.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOTO FINAL
+===================================================== -->
+
+<section class="final">
+
+    <div class="photo-wrap">
+        <img src="foto3.jpg"
+             class="photo"
+             alt="Nosotros">
+    </div>
+
+    <h2>Feliz cumpleaños, mi tiquitita</h2>
+
+    <div class="final-love">
+        Te amo mucho muchísimo,<br>
+        tiquitita bebé ♡
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     YOUTUBE IFRAME API
+===================================================== -->
 
 <script src="https://www.youtube.com/iframe_api"></script>
 
@@ -574,149 +653,138 @@ h2{
 
 const songs = {
 
-    airbag: {
-        id: "ue0RP3C1Brg",
-        player: null
+    viejas: {
+        videoId: "v5-RWjRCMmA",
+        start: 48,
+        end: 70
     },
 
-    cafres: {
-        id: "d0m0d3uViyE",
-        player: null
+    cerati: {
+        videoId: "eAO7CEcCD3s",
+        start: 155,
+        end: 177
     },
 
-    sabina: {
-        id: "FOJq2dYb4xI",
-        player: null
+    spinetta: {
+        videoId: "86j7A9r5vqQ",
+        start: 70,
+        end: 93
     },
 
-    prisioneros: {
-        id: "BypDMOqQUyg",
-        player: null
+    charly: {
+        videoId: "iTA75Z6E4eA",
+        start: 125,
+        end: 148
     },
 
     intoxicados: {
-        id: "7G3Y49xrbXs",
-        player: null
+        videoId: "_aAd2EIT9d0",
+        start: 140,
+        end: 164
     }
 
 };
 
-let currentPlayer = null;
-let currentTimer = null;
+const players = {};
+let currentSong = null;
+let stopTimer = null;
 
-function createPlayer(songName){
+
+function playSong(songName){
 
     const song = songs[songName];
 
-    if(song.player) return;
+    if(!song){
+        return;
+    }
 
-    song.player = new YT.Player(
-        "player-" + songName,
-        {
-            videoId: song.id,
+    if(stopTimer){
+        clearTimeout(stopTimer);
+        stopTimer = null;
+    }
 
-            playerVars:{
-                autoplay:0,
-                controls:1,
-                rel:0,
-                modestbranding:1,
-                playsinline:1
-            },
+    if(currentSong && currentSong !== songName){
 
-            events:{
-                onReady:function(){}
-            }
+        const oldPlayer = players[currentSong];
+
+        if(oldPlayer && typeof oldPlayer.stopVideo === "function"){
+            oldPlayer.stopVideo();
         }
+
+        const oldBox = document.getElementById(
+            "player-" + currentSong
+        );
+
+        if(oldBox){
+            oldBox.style.display = "none";
+        }
+    }
+
+    currentSong = songName;
+
+    const box = document.getElementById(
+        "player-" + songName
     );
 
-}
+    if(!box){
+        return;
+    }
 
+    box.style.display = "block";
 
-function playSong(songName,start,end){
+    if(!players[songName]){
 
-    clearTimeout(currentTimer);
+        players[songName] = new YT.Player(
+            box,
+            {
+                videoId: song.videoId,
 
-    const song = songs[songName];
+                playerVars: {
+                    autoplay: 1,
+                    controls: 1,
+                    rel: 0,
+                    modestbranding: 1,
+                    playsinline: 1,
+                    enablejsapi: 1,
+                    origin: window.location.origin
+                },
 
-    createPlayer(songName);
+                events: {
 
-    /*
-       Esperamos un momento si el reproductor
-       todavía se está creando.
-    */
+                    onReady: function(event){
 
-    const check = setInterval(function(){
+                        event.target.loadVideoById({
+                            videoId: song.videoId,
+                            startSeconds: song.start,
+                            endSeconds: song.end
+                        });
 
-        if(song.player &&
-           typeof song.player.loadVideoById === "function"){
+                    }
 
-            clearInterval(check);
-
-            // Pausar cualquier otra canción
-            Object.keys(songs).forEach(function(key){
-
-                if(
-                    songs[key].player &&
-                    key !== songName &&
-                    typeof songs[key].player.pauseVideo === "function"
-                ){
-                    songs[key].player.pauseVideo();
                 }
+            }
+        );
 
-                const box =
-                    document.getElementById("player-" + key);
+    } else {
 
-                if(key !== songName && box){
-                    box.classList.remove("active");
-                }
+        players[songName].loadVideoById({
+            videoId: song.videoId,
+            startSeconds: song.start,
+            endSeconds: song.end
+        });
 
-            });
+    }
 
-            const box =
-                document.getElementById("player-" + songName);
+    stopTimer = setTimeout(function(){
 
-            box.classList.add("active");
+        if(players[songName] &&
+           typeof players[songName].pauseVideo === "function"){
 
-            currentPlayer = song.player;
-
-            song.player.loadVideoById({
-
-                videoId:song.id,
-
-                startSeconds:start,
-
-                endSeconds:end
-
-            });
-
-            /*
-               Seguridad adicional:
-               detenemos también mediante JavaScript
-               cuando llegamos al final elegido.
-            */
-
-            currentTimer = setTimeout(function(){
-
-                if(currentPlayer){
-                    currentPlayer.pauseVideo();
-                }
-
-            },(end-start)*1000 + 800);
+            players[songName].pauseVideo();
 
         }
 
-    },100);
-
-}
-
-
-function onYouTubeIframeAPIReady(){
-
-    /*
-       Los reproductores se crean al tocar cada botón,
-       así la página no carga los cinco videos
-       innecesariamente.
-    */
+    }, (song.end - song.start) * 1000);
 
 }
 
